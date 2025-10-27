@@ -820,8 +820,8 @@ def main():
                     print(f"⚠ Error: {e}")
 
     if documents:
-        generate_simple_viewer(documents)
-        print(f"\n🎉 Viewer ready: index.html")
+        generate_simple_viewer(documents, output_file='docs/index.html')
+        print(f"\n🎉 Viewer ready: docs/index.html")
     else:
         print("❌ No OCR results found")
 

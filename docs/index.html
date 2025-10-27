@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Analysis Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>OCR Analysis Viewer</h1>
+        <p class="subtitle">Document Analysis & Text Recognition</p>
+    </header>
+
+    <div class="container">
+        <!-- Document Selector -->
+        <div class="doc-selector">
+            <div class="doc-selector-title">Select Document</div>
+            <div class="doc-buttons" id="docButtons"></div>
+        </div>
+
+        <!-- Combined Info Bar -->
+        <div class="info-bar" id="infoBar" style="display: none;">
+            <div class="info-meta" id="infoMeta"></div>
+            <div class="page-nav">
+                <button class="page-nav-btn" onclick="previousPage()" id="prevBtn">←</button>
+                <div class="page-info" id="pageInfo"></div>
+                <button class="page-nav-btn" onclick="nextPage()" id="nextBtn">→</button>
+            </div>
+        </div>
+
+        <!-- Thumbnail Strip -->
+        <div class="thumbnail-strip" id="thumbnailStrip" style="display: none;">
+            <div class="thumbnails" id="thumbnails"></div>
+        </div>
+
+        <!-- Main Comparison -->
+        <div class="comparison" id="comparison" style="display: none;">
+            <div class="panel">
+                <div class="panel-header">
+                    <h3 class="panel-title">Original Image</h3>
+                    <div class="panel-actions">
+                        <button class="icon-btn" onclick="resetZoom()" title="Reset">↺</button>
+                        <button class="icon-btn" onclick="downloadImage()" title="Download">↓</button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div class="image-viewer" id="imageViewer">
+                        <img id="pageImage" alt="Page" draggable="false">
+                        <div class="zoom-controls">
+                            <button class="zoom-btn" onclick="zoomOut()">−</button>
+                            <button class="zoom-btn" onclick="zoomReset()"><span id="zoomLevel">100%</span></button>
+                            <button class="zoom-btn" onclick="zoomIn()">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <h3 class="panel-title">OCR Result</h3>
+                    <div class="panel-actions">
+                        <button class="icon-btn" onclick="copyText()" title="Copy">⎘</button>
+                        <button class="icon-btn" onclick="downloadText()" title="Download">↓</button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div class="ocr-text" id="ocrText">
+                        <div class="empty-page">Select a document to view results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="viewer.js"></script>
+</body>
+</html>

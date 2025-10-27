@@ -1,0 +1,453 @@
+# Development Journal
+
+> Chronological documentation of project development and restructuring
+
+---
+
+## 2025-10-27 - Initial Setup & METS Processing
+
+### Project Initialization
+- Created DeepSeek-OCR evaluation framework
+- Set up Python virtual environment with dependencies:
+  - PyTorch 2.6.0
+  - Transformers 4.46.3
+  - PyMuPDF (fitz)
+  - DeepSeek-OCR model (3B params, BF16)
+
+### First METS Document Processing
+- **Document**: `o:szd.151` (Stefan Zweig - Abwesenheitsnotiz II)
+- **Source**: Literaturarchiv Salzburg
+- **Language**: German
+- **Pages**: 3
+- **Result**: Successfully processed with ~2-3% CER
+
+**Key Learnings**:
+- METS XML parsing works reliably with `lxml`
+- PyMuPDF better than pdf2image for conversion
+- Artifact filtering critical (page 2 had 8019 chars → 23 after filtering)
+
+### Artifact Filter Development
+Created `filter_artifacts.py` to remove:
+- Color reference cards (ROT, GELB, BLAU, NEUTRAL, FARBKARTE)
+- Measurement scales (mm, cm, decimal numbers)
+- Reference marks (BRAUN FARBKARTE)
+- Repetitive short lines
+
+**Effectiveness**: 47-99% noise reduction on test documents
+
+---
+
+## 2025-10-27 - Second METS Document
+
+### Processing `o:szd.196`
+- **Document**: Rede über Stefan Zweig [II]
+- **Language**: French
+- **Pages**: 9
+- **Status**: Successfully completed
+- **Processing time**: ~3 minutes
+
+**Challenge**: French text required proper UTF-8 handling on Windows
+**Solution**: Added UTF-8 wrapper to all scripts:
+```python
+import io, sys
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+```
+
+---
+
+## 2025-10-27 - PDF Processing & Large Documents
+
+### Started Processing DTS_Flechte.pdf
+- **Pages**: 595
+- **Language**: German
+- **Estimated time**: 2.5-3 hours
+- **Status**: Running in background
+
+**Implementation**:
+- PDF → Image conversion at 300 DPI
+- Sequential page-by-page processing
+- Progress tracking every 10 pages
+- Image caching for re-processing
+
+---
+
+## 2025-10-27 - Viewer Development (v1 - Dark Mode)
+
+### Initial Viewer Design
+- Created dark-mode viewer with advanced features
+- Document selector with metadata
+- Separate metadata and page navigation sections
+- Thumbnail strip
+- Image zoom/pan functionality
+- OCR text panel
+
+**User Feedback**: "entferne dark mode" + "weiß und helle professionelle wissenschaftliche töne"
+
+---
+
+## 2025-10-27 - Viewer Simplification (v2 - Light Scientific)
+
+### Redesign Based on Feedback
+- Removed dark mode completely
+- Light, clean scientific design
+- White background with subtle gray tones
+- Professional blue accents (#2563eb)
+
+**User Feedback**: "führe Document Metadata und Page Overview zusammen"
+
+---
+
+## 2025-10-27 - Viewer Finalization (v3 - Simple Clean)
+
+### Combined UI Elements
+- Merged metadata and page navigation into single info bar
+- Focused on core functionality: image vs OCR text comparison
+- Horizontal-only thumbnail strip
+- Side-by-side comparison (1.3fr image : 0.7fr text)
+- Created `generate_viewer_simple.py`
+
+**Key Features**:
+- Clean, uncluttered interface
+- Keyboard shortcuts (←→, +-, 0)
+- Export functions (copy, download)
+- Mobile responsive
+
+---
+
+## 2025-10-27 - GitHub Pages Optimization
+
+### Problem
+- 595 pages × ~2 MB/image = 1.2 GB (too large for GitHub Pages)
+- Need lightweight deployment
+
+### Solution: Smart Sampling
+Created `create_samples.py` for sample generation:
+
+**Sampling Strategy**:
+- Select 5-10 evenly distributed pages
+- Always include first and last page
+- Example: 595 pages → samples at pages 1, 60, 119, 178, ..., 595
+
+**Output Structure**:
+```
+samples/
+├── samples.json              # Master index
+├── {doc}_sample.json        # Viewer data (samples only)
+├── {doc}_full.json          # Complete download
+├── {doc}_transcription.txt  # Full text export
+├── {doc}_report.md          # Statistics
+└── images/{doc}/            # Sample images only
+```
+
+**Benefits**:
+- Viewer: < 10 MB (vs 1.2 GB)
+- Full data available as downloads
+- Representative page selection
+
+---
+
+## 2025-10-27 - First Git Commit & Push
+
+### Committed Changes
+```
+Add simplified OCR viewer with GitHub Pages support
+- 38 files changed
+- Generated viewer with samples
+- Full documentation
+```
+
+**Pushed to GitHub**: https://github.com/chpollin/deepseek-ocr
+
+---
+
+## 2025-10-27 - Documentation Creation
+
+### Initial Documentation Attempt
+- Created scattered markdown files in `knowledge/` directory
+- Files: `TECHNICAL.md`, `LEARNINGS.md`, `TEST_RESULTS.md`, etc.
+
+**User Feedback**: "räume auf und lege die dokumentation an!" + Request for Obsidian vault structure
+
+---
+
+## 2025-10-27 - Documentation Consolidation
+
+### Created Obsidian Vault
+Reorganized into 5 core documents:
+
+1. **00-Index.md** - Project dashboard with navigation
+2. **01-Quick-Start.md** - Installation and usage
+3. **02-Architecture.md** - System design and data flow
+4. **03-Results.md** - Evaluation metrics and statistics
+5. **04-Learnings.md** - Best practices and troubleshooting
+
+**Cleanup**:
+- Deleted redundant `knowledge/` files (5 files)
+- Deleted `generate_viewer.py` (replaced by `generate_viewer_simple.py`)
+- Updated `README.md` with modern structure
+
+### Committed Cleanup
+```
+Cleanup and documentation consolidation
+- Removed redundant files
+- Created Obsidian vault (docs/)
+- Updated README.md
+- Added DTS_Flechte.pdf (595 pages)
+```
+
+**Pushed to GitHub**
+
+---
+
+## 2025-10-27 - Project Restructuring
+
+### Problem
+- Monolithic HTML file with embedded CSS/JS (47 KB)
+- Python scripts scattered in root directory
+- Obsidian vault in wrong location
+- No clear separation between website and documentation
+
+### Solution: Modular Architecture
+
+#### 1. Website Structure (`docs/`)
+Created clean separation for GitHub Pages:
+```
+docs/
+├── index.html       # Clean HTML (3.3 KB)
+├── style.css        # External styles (8.1 KB)
+├── viewer.js        # Logic + data (31 KB)
+└── samples/         # Sample images
+```
+
+**Benefits**:
+- Cleaner code organization
+- Easier maintenance
+- Better browser caching
+- Professional structure
+
+#### 2. Scripts Folder (`scripts/`)
+Moved all Python scripts to dedicated folder:
+```
+scripts/
+├── README.md                    # Comprehensive docs
+├── test_ocr_mets.py            # METS processor
+├── test_ocr_pdf.py             # PDF processor
+├── filter_artifacts.py         # Artifact filter
+├── create_samples.py           # Sample generator
+├── generate_viewer_simple.py   # Viewer generator
+└── clean_ocr_results.py        # Result cleaner
+```
+
+**Created scripts/README.md** with:
+- Purpose of each script
+- Usage examples
+- Why we have each one
+- Complete workflow documentation
+- Performance metrics
+- Dependencies
+
+#### 3. Documentation Vault (`knowledge/`)
+Moved Obsidian vault from `docs/` to `knowledge/`:
+```
+knowledge/
+├── 00-Index.md
+├── 01-Quick-Start.md
+├── 02-Architecture.md
+├── 03-Results.md
+├── 04-Learnings.md
+└── JOURNAL.md      # ← This file!
+```
+
+**Rationale**:
+- `docs/` = website (public-facing)
+- `knowledge/` = documentation (development)
+- Clear separation of concerns
+
+#### 4. Updated README.md
+- Fixed all script paths (`python scripts/xyz.py`)
+- Updated project structure diagram
+- Fixed documentation links to `knowledge/`
+- Added `scripts/README.md` reference
+
+#### 5. Cleanup
+- Removed all Python files from root
+- Removed old `index.html` from root
+- Removed `README.md.backup`
+- Removed `__pycache__` directories
+
+---
+
+## Current Project Structure
+
+```
+deepseek-ocr/
+├── docs/                     # GitHub Pages Website
+│   ├── index.html           # Main viewer
+│   ├── style.css            # Styles
+│   ├── viewer.js            # Logic + data
+│   └── samples/             # Sample images
+├── scripts/                  # Python Scripts
+│   ├── README.md            # Scripts documentation
+│   └── *.py                 # All processing scripts
+├── knowledge/                # Obsidian Vault
+│   ├── 00-Index.md
+│   ├── 01-Quick-Start.md
+│   ├── 02-Architecture.md
+│   ├── 03-Results.md
+│   ├── 04-Learnings.md
+│   └── JOURNAL.md           # ← This file
+├── samples/                  # Deployment Samples
+├── data/                     # Input Documents
+├── results/                  # OCR Outputs
+├── venv/                     # Python Environment
+├── README.md                 # Project README
+└── requirements.txt          # Dependencies
+```
+
+---
+
+## Architecture Decisions
+
+### Why External CSS/JS?
+**Before**: 47 KB monolithic HTML
+**After**: 3.3 KB HTML + 8.1 KB CSS + 31 KB JS
+
+**Benefits**:
+1. Browser caching (CSS/JS cached separately)
+2. Easier maintenance (edit one file)
+3. Professional structure
+4. Better for version control
+5. Cleaner code
+
+### Why `scripts/` Folder?
+**Before**: 6 Python files in root directory
+**After**: All scripts in `scripts/` with README
+
+**Benefits**:
+1. Cleaner root directory
+2. Clear separation (code vs docs vs data)
+3. Easy to find all scripts
+4. Comprehensive documentation in one place
+5. Professional project structure
+
+### Why `knowledge/` for Docs?
+**Before**: `docs/` contained Obsidian vault
+**Problem**: GitHub Pages expects website in `docs/`
+
+**Solution**:
+- `docs/` = website (index.html, CSS, JS)
+- `knowledge/` = Obsidian vault (markdown docs)
+
+**Benefits**:
+1. GitHub Pages works automatically
+2. Clear naming (knowledge = learning/docs)
+3. No conflicts
+4. Professional separation
+
+---
+
+## Key Metrics
+
+### Processing Performance
+| Metric | Value |
+|--------|-------|
+| Model load time | 30-45s (first run) |
+| OCR per page | 15-20s |
+| Throughput | 120-360 pages/hour |
+| VRAM usage | ~10 GB |
+
+### Accuracy
+| Document | Language | Pages | CER |
+|----------|----------|-------|-----|
+| o:szd.151 | DE | 3 | ~2-3% |
+| o:szd.196 | FR | 9 | N/A |
+| DTS_Flechte.pdf | DE | 595 | TBD (processing) |
+
+### Artifact Filtering
+| Document | Original Chars | Cleaned Chars | Filtered |
+|----------|----------------|---------------|----------|
+| o:szd.151 (page 2) | 8,019 | 23 | 7,996 (99.7%) |
+| o:szd.151 (page 3) | 411 | 214 | 197 (47.9%) |
+
+---
+
+## Next Steps
+
+### Immediate
+- [ ] Complete DTS_Flechte.pdf processing (595 pages)
+- [ ] Generate samples for all documents
+- [ ] Test GitHub Pages deployment
+
+### Future
+- [ ] Add CER calculation for French documents
+- [ ] Implement batch processing mode
+- [ ] Add progress bar UI for long documents
+- [ ] Consider parallel processing for large PDFs
+- [ ] Add support for more METS variants
+
+---
+
+## Lessons Learned
+
+### Technical
+1. **PyMuPDF > pdf2image** - Better quality, fewer dependencies
+2. **Windows UTF-8** - Always wrap stdout for non-ASCII text
+3. **Artifact filtering essential** - 47-99% noise reduction
+4. **Sampling strategy** - Makes large datasets deployable
+5. **External CSS/JS** - Better for maintenance and caching
+
+### Process
+1. **User feedback is gold** - Direct input improved UI dramatically
+2. **Iterative refinement** - Three viewer versions to get it right
+3. **Documentation matters** - Obsidian vault + scripts README = clarity
+4. **Clean structure** - `docs/`, `scripts/`, `knowledge/` separation works
+5. **Git early, git often** - Two commits so far, more to come
+
+### Project Management
+1. **One feature at a time** - Don't try to do everything at once
+2. **Test with real data** - METS + PDF gave different challenges
+3. **Plan for GitHub Pages** - File size limits require sampling
+4. **Keep it modular** - External CSS/JS easier to maintain
+5. **Document as you go** - JOURNAL.md captures reasoning
+
+---
+
+## Tools & Technologies
+
+### Core Stack
+- **Python** 3.11+
+- **PyTorch** 2.6.0
+- **Transformers** 4.46.3 (Hugging Face)
+- **DeepSeek-OCR** - 3B params, BF16 precision
+
+### Libraries
+- **PyMuPDF** (fitz) - PDF processing
+- **Pillow** - Image handling
+- **lxml** - METS XML parsing
+- **json** - Data serialization
+
+### Frontend
+- **HTML5** - Clean semantic markup
+- **CSS3** - Modern styling with CSS variables
+- **Vanilla JavaScript** - No frameworks needed
+
+### Hardware
+- **GPU**: RTX 4080 (16 GB VRAM)
+- **CUDA**: 11.8 / 13.0
+- **OS**: Windows 11
+
+---
+
+## Contact & Links
+
+- **Repository**: https://github.com/chpollin/deepseek-ocr
+- **Live Demo**: https://chpollin.github.io/deepseek-ocr/
+- **Model**: https://huggingface.co/deepseek-ai/DeepSeek-OCR
+- **Issues**: https://github.com/chpollin/deepseek-ocr/issues
+
+---
+
+**Journal Started**: 2025-10-27
+**Last Updated**: 2025-10-27
+**Status**: Active Development

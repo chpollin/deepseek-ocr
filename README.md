@@ -44,19 +44,19 @@ pip install -r requirements.txt
 
 ```bash
 # METS document
-python test_ocr_mets.py data/o_szd.151/
+python scripts/test_ocr_mets.py data/o_szd.151/
 
 # PDF
-python test_ocr_pdf.py data/document.pdf
+python scripts/test_ocr_pdf.py data/document.pdf
 
 # Create samples for GitHub Pages
-python create_samples.py
+python scripts/create_samples.py
 
 # Generate interactive viewer
-python generate_viewer_simple.py
+python scripts/generate_viewer_simple.py
 
 # View locally
-python -m http.server 8000
+cd docs && python -m http.server 8000
 # Open http://localhost:8000/
 ```
 
@@ -92,32 +92,38 @@ python -m http.server 8000
 
 ```
 deepseek-ocr/
-├── docs/                         # 📚 Obsidian Vault Documentation
+├── docs/                         # 🌐 GitHub Pages Website
+│   ├── index.html               # Main viewer page
+│   ├── style.css                # Viewer styles
+│   ├── viewer.js                # Viewer logic + data
+│   └── samples/                 # Sample images
+├── scripts/                      # 🔧 Python Scripts
+│   ├── README.md                # Scripts documentation
+│   ├── test_ocr_mets.py         # METS document processor
+│   ├── test_ocr_pdf.py          # PDF processor
+│   ├── filter_artifacts.py      # Artifact detection & removal
+│   ├── create_samples.py        # Sample generator for GitHub Pages
+│   ├── generate_viewer_simple.py # Viewer generator
+│   └── clean_ocr_results.py     # Apply filters to results
+├── knowledge/                    # 📚 Obsidian Vault Documentation
 │   ├── 00-Index.md              # Overview & quick navigation
 │   ├── 01-Quick-Start.md        # Installation & usage
 │   ├── 02-Architecture.md       # System design & data flow
 │   ├── 03-Results.md            # Evaluation & metrics
 │   └── 04-Learnings.md          # Best practices & tips
-├── samples/                      # 🎨 GitHub Pages deployment
+├── samples/                      # 🎨 Deployment Samples
 │   ├── images/                  # Sample images (12 total)
 │   ├── *_sample.json            # Viewer data
 │   ├── *_full.json              # Complete data
 │   ├── *_transcription.txt      # Full transcriptions
 │   └── *_report.md              # Statistical reports
-├── data/                         # 📂 Input documents
+├── data/                         # 📂 Input Documents
 │   ├── o_szd.151/               # METS (German, 3 pages)
 │   ├── o_szd.196/               # METS (French, 9 pages)
 │   └── DTS_Flechte.pdf          # PDF (595 pages)
-├── results/                      # 💾 OCR outputs
+├── results/                      # 💾 OCR Outputs
 │   ├── mets_*/                  # METS processing results
 │   └── pdf_*/                   # PDF processing results
-├── index.html                    # 🌐 Interactive viewer
-├── test_ocr_mets.py             # METS document processor
-├── test_ocr_pdf.py              # PDF processor
-├── filter_artifacts.py          # Artifact detection & removal
-├── create_samples.py            # Sample generator for GitHub Pages
-├── generate_viewer_simple.py    # Viewer generator
-├── clean_ocr_results.py         # Apply filters to results
 └── requirements.txt             # Python dependencies
 ```
 
@@ -154,13 +160,14 @@ deepseek-ocr/
 
 Comprehensive documentation in Obsidian-compatible Markdown:
 
-- **[00-Index.md](docs/00-Index.md)** - Project overview & navigation
-- **[01-Quick-Start.md](docs/01-Quick-Start.md)** - Installation & usage examples
-- **[02-Architecture.md](docs/02-Architecture.md)** - System design & components
-- **[03-Results.md](docs/03-Results.md)** - Performance metrics & evaluation
-- **[04-Learnings.md](docs/04-Learnings.md)** - Best practices & troubleshooting
+- **[00-Index.md](knowledge/00-Index.md)** - Project overview & navigation
+- **[01-Quick-Start.md](knowledge/01-Quick-Start.md)** - Installation & usage examples
+- **[02-Architecture.md](knowledge/02-Architecture.md)** - System design & components
+- **[03-Results.md](knowledge/03-Results.md)** - Performance metrics & evaluation
+- **[04-Learnings.md](knowledge/04-Learnings.md)** - Best practices & troubleshooting
+- **[scripts/README.md](scripts/README.md)** - Scripts documentation & workflow
 
-**View in Obsidian:** Open `docs/` folder as vault
+**View in Obsidian:** Open `knowledge/` folder as vault
 
 ---
 
