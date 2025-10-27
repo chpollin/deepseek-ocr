@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """
-Clean Scientific OCR Viewer Generator
-- Light theme only (white background, professional academic colors)
-- Works with any OCR results (no METS dependency)
-- Simple, clean, scientific design
+Simplified OCR Viewer - Focus on Image vs Text comparison
 """
 
 import io, sys
@@ -15,14 +12,10 @@ import os
 from pathlib import Path
 
 def load_ocr_results(results_file):
-    """Load OCR results from JSON file"""
     with open(results_file, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def generate_clean_viewer(documents, output_file='index.html'):
-    """Generate clean scientific HTML viewer"""
-
-    # Convert documents to JSON
+def generate_simple_viewer(documents, output_file='index.html'):
     docs_json = json.dumps(documents, ensure_ascii=False, indent=2)
 
     html_content = f'''<!DOCTYPE html>
@@ -32,41 +25,23 @@ def generate_clean_viewer(documents, output_file='index.html'):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCR Analysis Viewer</title>
     <style>
-        /* Clean Scientific Design System */
         :root {{
-            /* Professional academic colors - light theme only */
             --primary: #2563eb;
             --primary-dark: #1e40af;
-            --primary-light: #3b82f6;
-            --secondary: #0891b2;
-            --accent: #7c3aed;
-            --success: #059669;
-            --white: #ffffff;
             --gray-50: #f9fafb;
             --gray-100: #f3f4f6;
             --gray-200: #e5e7eb;
             --gray-300: #d1d5db;
-            --gray-400: #9ca3af;
-            --gray-500: #6b7280;
             --gray-600: #4b5563;
-            --gray-700: #374151;
             --gray-800: #1f2937;
-
-            /* Spacing */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --white: #ffffff;
             --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             --radius: 0.5rem;
-            --radius-lg: 0.75rem;
         }}
 
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }}
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
 
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -75,143 +50,183 @@ def generate_clean_viewer(documents, output_file='index.html'):
             line-height: 1.6;
         }}
 
-        /* Header */
         header {{
             background: var(--white);
             border-bottom: 3px solid var(--primary);
-            padding: 1.75rem 2rem;
+            padding: 1.5rem 2rem;
             box-shadow: var(--shadow-md);
         }}
 
-        .header-content {{
-            max-width: 1600px;
-            margin: 0 auto;
-        }}
-
         h1 {{
-            font-size: 1.875rem;
+            font-size: 1.75rem;
             font-weight: 700;
             color: var(--gray-800);
-            margin-bottom: 0.375rem;
+            margin-bottom: 0.25rem;
         }}
 
         .subtitle {{
             color: var(--gray-600);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }}
 
-        /* Container */
         .container {{
-            max-width: 1600px;
+            max-width: 1800px;
             margin: 0 auto;
             padding: 2rem;
         }}
 
-        /* Card */
-        .card {{
+        /* Document Selector - Compact */
+        .doc-selector {{
             background: var(--white);
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
-            padding: 1.75rem;
-            margin-bottom: 1.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
             border: 1px solid var(--gray-200);
         }}
 
-        .card-title {{
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1.25rem;
-            color: var(--gray-800);
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid var(--gray-200);
-        }}
-
-        /* Document Selector */
-        .doc-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.25rem;
-        }}
-
-        .doc-card {{
-            padding: 1.5rem;
-            border: 2px solid var(--gray-200);
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            cursor: pointer;
-            transition: all 0.2s;
-        }}
-
-        .doc-card:hover {{
-            border-color: var(--primary);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }}
-
-        .doc-card.active {{
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-            box-shadow: var(--shadow-lg);
-        }}
-
-        .doc-title {{
-            font-weight: 700;
-            font-size: 1.125rem;
+        .doc-selector-title {{
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin-bottom: 0.75rem;
         }}
 
-        .doc-meta {{
-            font-size: 0.9rem;
-            opacity: 0.85;
+        .doc-buttons {{
             display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }}
+
+        .doc-btn {{
+            padding: 0.625rem 1rem;
+            border: 2px solid var(--gray-300);
+            background: var(--white);
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            font-weight: 500;
+        }}
+
+        .doc-btn:hover {{
+            border-color: var(--primary);
+            transform: translateY(-1px);
+        }}
+
+        .doc-btn.active {{
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }}
+
+        .doc-btn-meta {{
+            font-size: 0.75rem;
+            opacity: 0.8;
+            margin-top: 0.25rem;
+        }}
+
+        /* Combined Info Bar - Metadata + Page Nav */
+        .info-bar {{
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
         }}
 
-        /* Metadata Grid */
-        .metadata-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
+        .info-meta {{
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
         }}
 
-        .metadata-item {{
-            padding: 1.25rem;
-            background: var(--gray-50);
-            border-radius: var(--radius);
-            border-left: 4px solid var(--primary);
+        .info-item {{
+            display: flex;
+            flex-direction: column;
         }}
 
-        .metadata-label {{
-            font-weight: 600;
+        .info-label {{
+            font-size: 0.75rem;
             color: var(--gray-600);
-            font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
         }}
 
-        .metadata-value {{
-            font-size: 1.125rem;
+        .info-value {{
+            font-size: 0.95rem;
             font-weight: 600;
             color: var(--gray-800);
+            margin-top: 0.125rem;
         }}
 
-        /* Thumbnails */
-        .thumbnail-nav {{
+        .page-nav {{
             display: flex;
-            gap: 1rem;
+            gap: 0.5rem;
+            align-items: center;
+        }}
+
+        .page-nav-btn {{
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }}
+
+        .page-nav-btn:hover:not(:disabled) {{
+            background: var(--primary-dark);
+        }}
+
+        .page-nav-btn:disabled {{
+            background: var(--gray-300);
+            cursor: not-allowed;
+            opacity: 0.6;
+        }}
+
+        .page-info {{
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            background: var(--gray-100);
+            border-radius: var(--radius);
+        }}
+
+        /* Thumbnail Strip - Horizontal only */
+        .thumbnail-strip {{
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--gray-200);
             overflow-x: auto;
-            padding: 1rem 0;
+        }}
+
+        .thumbnails {{
+            display: flex;
+            gap: 0.75rem;
         }}
 
         .thumbnail {{
             flex-shrink: 0;
-            width: 130px;
-            height: 180px;
-            border: 3px solid var(--gray-300);
-            border-radius: var(--radius);
+            width: 80px;
+            height: 110px;
+            border: 2px solid var(--gray-300);
+            border-radius: 0.375rem;
             cursor: pointer;
             overflow: hidden;
             transition: all 0.2s;
@@ -219,14 +234,14 @@ def generate_clean_viewer(documents, output_file='index.html'):
         }}
 
         .thumbnail:hover {{
-            border-color: var(--primary-light);
+            border-color: var(--primary);
             transform: scale(1.05);
-            box-shadow: var(--shadow-md);
         }}
 
         .thumbnail.active {{
             border-color: var(--primary);
-            box-shadow: var(--shadow-lg);
+            border-width: 3px;
+            box-shadow: var(--shadow-md);
         }}
 
         .thumbnail img {{
@@ -242,108 +257,66 @@ def generate_clean_viewer(documents, output_file='index.html'):
             right: 0;
             background: rgba(37, 99, 235, 0.9);
             color: white;
-            padding: 0.5rem 0.25rem;
+            padding: 0.25rem;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 600;
         }}
 
-        /* Page Navigation */
-        .page-navigation {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }}
-
-        .page-nav-buttons {{
-            display: flex;
-            gap: 0.75rem;
-        }}
-
-        .page-nav-btn {{
-            padding: 0.875rem 1.5rem;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: var(--radius);
-            cursor: pointer;
-            font-size: 0.975rem;
-            font-weight: 600;
-            transition: all 0.2s;
-        }}
-
-        .page-nav-btn:hover:not(:disabled) {{
-            background: var(--primary-dark);
-            box-shadow: var(--shadow-md);
-        }}
-
-        .page-nav-btn:disabled {{
-            background: var(--gray-300);
-            cursor: not-allowed;
-            opacity: 0.6;
-        }}
-
-        .page-info {{
-            font-size: 1.125rem;
-            font-weight: 600;
-            padding: 0.875rem 1.5rem;
-            background: var(--gray-100);
-            border-radius: var(--radius);
-            border: 2px solid var(--gray-200);
-        }}
-
-        /* Comparison View */
-        .comparison-view {{
+        /* Main Comparison - Side by Side */
+        .comparison {{
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 1.75rem;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 1.5rem;
         }}
 
         @media (max-width: 1200px) {{
-            .comparison-view {{
+            .comparison {{
                 grid-template-columns: 1fr;
             }}
         }}
 
         .panel {{
             background: var(--white);
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius);
             box-shadow: var(--shadow-md);
             overflow: hidden;
             border: 1px solid var(--gray-200);
+            height: 700px;
+            display: flex;
+            flex-direction: column;
         }}
 
         .panel-header {{
-            padding: 1.125rem 1.5rem;
+            padding: 1rem 1.25rem;
             background: var(--gray-100);
             border-bottom: 2px solid var(--gray-200);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-shrink: 0;
         }}
 
         .panel-title {{
-            font-size: 1.125rem;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--gray-800);
         }}
 
         .panel-actions {{
             display: flex;
-            gap: 0.5rem;
+            gap: 0.375rem;
         }}
 
         .icon-btn {{
             background: var(--white);
-            border: 2px solid var(--gray-300);
+            border: 1px solid var(--gray-300);
             color: var(--gray-600);
             cursor: pointer;
-            padding: 0.5rem 0.75rem;
-            border-radius: var(--radius);
+            padding: 0.375rem 0.625rem;
+            border-radius: 0.375rem;
             transition: all 0.2s;
-            font-size: 1.125rem;
+            font-size: 1rem;
         }}
 
         .icon-btn:hover {{
@@ -353,19 +326,19 @@ def generate_clean_viewer(documents, output_file='index.html'):
         }}
 
         .panel-content {{
-            padding: 1.75rem;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
         }}
 
         /* Image Viewer */
         .image-viewer {{
-            position: relative;
             width: 100%;
-            height: 600px;
+            height: 100%;
             background: var(--gray-50);
-            border-radius: var(--radius);
             overflow: hidden;
             cursor: grab;
-            border: 2px solid var(--gray-200);
+            position: relative;
         }}
 
         .image-viewer:active {{
@@ -382,13 +355,13 @@ def generate_clean_viewer(documents, output_file='index.html'):
 
         .zoom-controls {{
             position: absolute;
-            bottom: 1.25rem;
-            right: 1.25rem;
+            bottom: 1rem;
+            right: 1rem;
             display: flex;
-            gap: 0.5rem;
-            background: var(--white);
+            gap: 0.375rem;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius);
-            padding: 0.625rem;
+            padding: 0.5rem;
             box-shadow: var(--shadow-lg);
             border: 1px solid var(--gray-200);
         }}
@@ -396,13 +369,13 @@ def generate_clean_viewer(documents, output_file='index.html'):
         .zoom-btn {{
             background: var(--gray-100);
             border: 1px solid var(--gray-300);
-            color: var(--gray-700);
+            color: var(--gray-800);
             cursor: pointer;
-            padding: 0.5rem 0.875rem;
-            border-radius: var(--radius);
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.375rem;
             font-weight: 600;
             transition: all 0.2s;
-            min-width: 2.75rem;
+            min-width: 2.5rem;
         }}
 
         .zoom-btn:hover {{
@@ -418,18 +391,15 @@ def generate_clean_viewer(documents, output_file='index.html'):
             line-height: 1.8;
             padding: 1.5rem;
             background: var(--gray-50);
-            border-radius: var(--radius);
-            max-height: 600px;
+            height: 100%;
             overflow-y: auto;
-            font-size: 0.95rem;
-            border: 2px solid var(--gray-200);
-            color: var(--gray-800);
+            font-size: 0.9rem;
         }}
 
         .empty-page {{
             text-align: center;
             padding: 3rem 1.5rem;
-            color: var(--gray-500);
+            color: var(--gray-600);
             font-style: italic;
         }}
 
@@ -438,11 +408,11 @@ def generate_clean_viewer(documents, output_file='index.html'):
             position: fixed;
             top: 5.5rem;
             right: 2rem;
-            background: var(--success);
+            background: #059669;
             color: white;
             padding: 1rem 1.5rem;
             border-radius: var(--radius);
-            box-shadow: var(--shadow-xl);
+            box-shadow: var(--shadow-lg);
             z-index: 1000;
             transform: translateX(400px);
             transition: transform 0.3s;
@@ -453,102 +423,54 @@ def generate_clean_viewer(documents, output_file='index.html'):
             transform: translateX(0);
         }}
 
-        /* Animations */
-        .fade-in {{
-            animation: fadeIn 0.5s ease-out;
-        }}
-
-        @keyframes fadeIn {{
-            from {{
-                opacity: 0;
-                transform: translateY(15px);
-            }}
-            to {{
-                opacity: 1;
-                transform: translateY(0);
-            }}
-        }}
-
-        /* Responsive */
         @media (max-width: 768px) {{
-            .container {{
-                padding: 1.25rem;
-            }}
-
-            h1 {{
-                font-size: 1.5rem;
-            }}
-
-            .doc-grid {{
-                grid-template-columns: 1fr;
-            }}
-
-            .metadata-grid {{
-                grid-template-columns: 1fr;
-            }}
-
-            .image-viewer {{
-                height: 400px;
-            }}
+            .container {{ padding: 1rem; }}
+            .info-bar {{ flex-direction: column; align-items: flex-start; }}
+            .panel {{ height: 500px; }}
         }}
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>OCR Analysis Viewer</h1>
-            <p class="subtitle">Document Analysis & Text Recognition</p>
-        </div>
+        <h1>OCR Analysis Viewer</h1>
+        <p class="subtitle">Document Analysis & Text Recognition</p>
     </header>
 
     <div class="container">
         <!-- Document Selector -->
-        <div class="card fade-in">
-            <h2 class="card-title">Select Document</h2>
-            <div class="doc-grid" id="docGrid"></div>
+        <div class="doc-selector">
+            <div class="doc-selector-title">Select Document</div>
+            <div class="doc-buttons" id="docButtons"></div>
         </div>
 
-        <!-- Metadata -->
-        <div class="card fade-in" id="metadataCard" style="display: none;">
-            <h2 class="card-title">Document Metadata</h2>
-            <div class="metadata-grid" id="metadata"></div>
-        </div>
-
-        <!-- Thumbnails -->
-        <div class="card fade-in" id="thumbnailCard" style="display: none;">
-            <h2 class="card-title">Page Overview</h2>
-            <div class="thumbnail-nav" id="thumbnailNav"></div>
-        </div>
-
-        <!-- Page Navigation -->
-        <div class="card fade-in" id="pageNavCard" style="display: none;">
-            <div class="page-navigation">
-                <div class="page-nav-buttons">
-                    <button class="page-nav-btn" onclick="previousPage()" id="prevBtn">
-                        ← Previous
-                    </button>
-                    <button class="page-nav-btn" onclick="nextPage()" id="nextBtn">
-                        Next →
-                    </button>
-                </div>
+        <!-- Combined Info Bar -->
+        <div class="info-bar" id="infoBar" style="display: none;">
+            <div class="info-meta" id="infoMeta"></div>
+            <div class="page-nav">
+                <button class="page-nav-btn" onclick="previousPage()" id="prevBtn">←</button>
                 <div class="page-info" id="pageInfo"></div>
+                <button class="page-nav-btn" onclick="nextPage()" id="nextBtn">→</button>
             </div>
         </div>
 
-        <!-- Comparison View -->
-        <div class="comparison-view fade-in" id="comparisonView" style="display: none;">
-            <!-- Image Panel -->
+        <!-- Thumbnail Strip -->
+        <div class="thumbnail-strip" id="thumbnailStrip" style="display: none;">
+            <div class="thumbnails" id="thumbnails"></div>
+        </div>
+
+        <!-- Main Comparison -->
+        <div class="comparison" id="comparison" style="display: none;">
             <div class="panel">
                 <div class="panel-header">
                     <h3 class="panel-title">Original Image</h3>
                     <div class="panel-actions">
-                        <button class="icon-btn" onclick="resetZoom()" title="Reset zoom">↺</button>
+                        <button class="icon-btn" onclick="resetZoom()" title="Reset">↺</button>
                         <button class="icon-btn" onclick="downloadImage()" title="Download">↓</button>
                     </div>
                 </div>
                 <div class="panel-content">
                     <div class="image-viewer" id="imageViewer">
-                        <img id="pageImage" alt="Page image" draggable="false">
+                        <img id="pageImage" alt="Page" draggable="false">
                         <div class="zoom-controls">
                             <button class="zoom-btn" onclick="zoomOut()">−</button>
                             <button class="zoom-btn" onclick="zoomReset()"><span id="zoomLevel">100%</span></button>
@@ -558,30 +480,27 @@ def generate_clean_viewer(documents, output_file='index.html'):
                 </div>
             </div>
 
-            <!-- Text Panel -->
             <div class="panel">
                 <div class="panel-header">
                     <h3 class="panel-title">OCR Result</h3>
                     <div class="panel-actions">
-                        <button class="icon-btn" onclick="copyText()" title="Copy text">⎘</button>
+                        <button class="icon-btn" onclick="copyText()" title="Copy">⎘</button>
                         <button class="icon-btn" onclick="downloadText()" title="Download">↓</button>
                     </div>
                 </div>
                 <div class="panel-content">
                     <div class="ocr-text" id="ocrText">
-                        <div class="empty-page">Select a document and page to view OCR results</div>
+                        <div class="empty-page">Select a document to view results</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Toast -->
     <div class="toast" id="toast"></div>
 
     <script>
         const DOCUMENTS = {docs_json};
-
         let currentDoc = null;
         let currentPageIndex = 0;
         let zoomLevel = 1;
@@ -595,24 +514,23 @@ def generate_clean_viewer(documents, output_file='index.html'):
         }});
 
         function initializeDocumentButtons() {{
-            const container = document.getElementById('docGrid');
+            const container = document.getElementById('docButtons');
             Object.entries(DOCUMENTS).forEach(([docId, doc]) => {{
-                const card = document.createElement('div');
-                card.className = 'doc-card';
-                card.onclick = () => selectDocument(docId);
+                const btn = document.createElement('button');
+                btn.className = 'doc-btn';
+                btn.onclick = () => selectDocument(docId);
 
-                const pageCount = doc.pages ? doc.pages.length : 0;
                 const meta = doc.metadata || doc.mets_metadata || {{}};
+                const pageCount = doc.pages ? doc.pages.length : 0;
 
-                card.innerHTML = `
-                    <div class="doc-title">${{meta.title || docId}}</div>
-                    <div class="doc-meta">
-                        ${{meta.author ? `<span>Author: ${{meta.author}}</span>` : ''}}
-                        ${{meta.language ? `<span>Lang: ${{meta.language.toUpperCase()}}</span>` : ''}}
-                        <span>Pages: ${{pageCount}}</span>
-                    </div>
+                const totalPages = doc.total_pages || pageCount;
+                const sampleText = doc.is_sample ? ` (${{pageCount}} samples)` : '';
+
+                btn.innerHTML = `
+                    <div>${{meta.title || docId}}</div>
+                    <div class="doc-btn-meta">${{meta.author || ''}} • ${{meta.language ? meta.language.toUpperCase() : ''}} • ${{totalPages}} pages${{sampleText}}</div>
                 `;
-                container.appendChild(card);
+                container.appendChild(btn);
             }});
         }}
 
@@ -620,37 +538,34 @@ def generate_clean_viewer(documents, output_file='index.html'):
             currentDoc = DOCUMENTS[docId];
             currentPageIndex = 0;
 
-            document.querySelectorAll('.doc-card').forEach((card, idx) => {{
-                card.classList.toggle('active', Object.keys(DOCUMENTS)[idx] === docId);
+            document.querySelectorAll('.doc-btn').forEach((btn, idx) => {{
+                btn.classList.toggle('active', Object.keys(DOCUMENTS)[idx] === docId);
             }});
 
-            displayMetadata();
+            displayInfoBar();
             createThumbnails();
             displayPage();
 
-            document.getElementById('metadataCard').style.display = 'block';
-            document.getElementById('thumbnailCard').style.display = 'block';
-            document.getElementById('pageNavCard').style.display = 'block';
-            document.getElementById('comparisonView').style.display = 'grid';
+            document.getElementById('infoBar').style.display = 'flex';
+            document.getElementById('thumbnailStrip').style.display = 'block';
+            document.getElementById('comparison').style.display = 'grid';
         }}
 
-        function displayMetadata() {{
-            const container = document.getElementById('metadata');
-            // Support both 'metadata' and 'mets_metadata' keys
+        function displayInfoBar() {{
+            const container = document.getElementById('infoMeta');
             const meta = currentDoc.metadata || currentDoc.mets_metadata || {{}};
 
             let html = '';
-            if (meta.title) html += `<div class="metadata-item"><div class="metadata-label">Title</div><div class="metadata-value">${{meta.title}}</div></div>`;
-            if (meta.author) html += `<div class="metadata-item"><div class="metadata-label">Author</div><div class="metadata-value">${{meta.author}}</div></div>`;
-            if (meta.signature) html += `<div class="metadata-item"><div class="metadata-label">Signature</div><div class="metadata-value">${{meta.signature}}</div></div>`;
-            if (meta.language) html += `<div class="metadata-item"><div class="metadata-label">Language</div><div class="metadata-value">${{meta.language.toUpperCase()}}</div></div>`;
-            html += `<div class="metadata-item"><div class="metadata-label">Pages</div><div class="metadata-value">${{currentDoc.pages ? currentDoc.pages.length : 0}}</div></div>`;
+            if (meta.title) html += `<div class="info-item"><span class="info-label">Title</span><span class="info-value">${{meta.title}}</span></div>`;
+            if (meta.author) html += `<div class="info-item"><span class="info-label">Author</span><span class="info-value">${{meta.author}}</span></div>`;
+            if (meta.language) html += `<div class="info-item"><span class="info-label">Language</span><span class="info-value">${{meta.language.toUpperCase()}}</span></div>`;
+            html += `<div class="info-item"><span class="info-label">Pages</span><span class="info-value">${{currentDoc.pages ? currentDoc.pages.length : 0}}</span></div>`;
 
             container.innerHTML = html;
         }}
 
         function createThumbnails() {{
-            const container = document.getElementById('thumbnailNav');
+            const container = document.getElementById('thumbnails');
             container.innerHTML = '';
 
             if (!currentDoc.pages) return;
@@ -669,7 +584,7 @@ def generate_clean_viewer(documents, output_file='index.html'):
 
                 const label = document.createElement('div');
                 label.className = 'thumbnail-label';
-                label.textContent = `Page ${{idx + 1}}`;
+                label.textContent = idx + 1;
 
                 thumb.appendChild(img);
                 thumb.appendChild(label);
@@ -680,13 +595,18 @@ def generate_clean_viewer(documents, output_file='index.html'):
         }}
 
         function getImagePath(page) {{
-            // Priority 1: Direct image_path
+            // For samples: use samples/images/ path
+            if (currentDoc.is_sample && page.image_file) {{
+                const urn = currentDoc.mets_metadata?.urn || '';
+                if (urn) {{
+                    const objectId = urn.split('/').pop().replace(/:/g, '_');
+                    return `samples/images/${{objectId}}/${{page.image_file}}`;
+                }}
+            }}
+
+            // Standard paths
             if (page.image_path) return page.image_path;
-
-            // Priority 2: image field
             if (page.image) return page.image;
-
-            // Priority 3: Construct from METS metadata
             if (page.image_file && currentDoc.mets_metadata) {{
                 const urn = currentDoc.mets_metadata.urn;
                 if (urn) {{
@@ -694,10 +614,7 @@ def generate_clean_viewer(documents, output_file='index.html'):
                     return `data/${{objectId}}/images/${{page.image_file}}`;
                 }}
             }}
-
-            // Priority 4: PDF pages
             if (page.file) return page.file;
-
             return '';
         }}
 
@@ -711,9 +628,7 @@ def generate_clean_viewer(documents, output_file='index.html'):
             if (!currentDoc.pages || !currentDoc.pages[currentPageIndex]) return;
 
             const page = currentDoc.pages[currentPageIndex];
-
-            const img = document.getElementById('pageImage');
-            img.src = getImagePath(page);
+            document.getElementById('pageImage').src = getImagePath(page);
 
             const textContainer = document.getElementById('ocrText');
             if (page.filtered_text && page.filtered_text.trim()) {{
@@ -736,7 +651,7 @@ def generate_clean_viewer(documents, output_file='index.html'):
             const pageCount = currentDoc.pages ? currentDoc.pages.length : 0;
             document.getElementById('prevBtn').disabled = currentPageIndex === 0;
             document.getElementById('nextBtn').disabled = currentPageIndex === pageCount - 1;
-            document.getElementById('pageInfo').textContent = `Page ${{currentPageIndex + 1}} of ${{pageCount}}`;
+            document.getElementById('pageInfo').textContent = `${{currentPageIndex + 1}} / ${{pageCount}}`;
         }}
 
         function previousPage() {{
@@ -756,7 +671,6 @@ def generate_clean_viewer(documents, output_file='index.html'):
 
         function initializeImageViewer() {{
             const viewer = document.getElementById('imageViewer');
-
             viewer.addEventListener('mousedown', (e) => {{
                 if (zoomLevel > 1) {{
                     isDragging = true;
@@ -764,7 +678,6 @@ def generate_clean_viewer(documents, output_file='index.html'):
                     startY = e.clientY - translateY;
                 }}
             }});
-
             viewer.addEventListener('mousemove', (e) => {{
                 if (isDragging) {{
                     translateX = e.clientX - startX;
@@ -772,10 +685,8 @@ def generate_clean_viewer(documents, output_file='index.html'):
                     updateImageTransform();
                 }}
             }});
-
             viewer.addEventListener('mouseup', () => {{ isDragging = false; }});
             viewer.addEventListener('mouseleave', () => {{ isDragging = false; }});
-
             viewer.addEventListener('wheel', (e) => {{
                 e.preventDefault();
                 const delta = e.deltaY > 0 ? -0.1 : 0.1;
@@ -823,7 +734,7 @@ def generate_clean_viewer(documents, output_file='index.html'):
         function copyText() {{
             const text = document.getElementById('ocrText').textContent;
             navigator.clipboard.writeText(text).then(() => {{
-                showToast('✓ Text copied to clipboard');
+                showToast('✓ Text copied');
             }});
         }}
 
@@ -851,29 +762,12 @@ def generate_clean_viewer(documents, output_file='index.html'):
         function initializeKeyboardShortcuts() {{
             document.addEventListener('keydown', (e) => {{
                 if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-
                 switch(e.key) {{
-                    case 'ArrowLeft':
-                        e.preventDefault();
-                        previousPage();
-                        break;
-                    case 'ArrowRight':
-                        e.preventDefault();
-                        nextPage();
-                        break;
-                    case '+':
-                    case '=':
-                        e.preventDefault();
-                        zoomIn();
-                        break;
-                    case '-':
-                        e.preventDefault();
-                        zoomOut();
-                        break;
-                    case '0':
-                        e.preventDefault();
-                        zoomReset();
-                        break;
+                    case 'ArrowLeft': e.preventDefault(); previousPage(); break;
+                    case 'ArrowRight': e.preventDefault(); nextPage(); break;
+                    case '+': case '=': e.preventDefault(); zoomIn(); break;
+                    case '-': e.preventDefault(); zoomOut(); break;
+                    case '0': e.preventDefault(); zoomReset(); break;
                 }}
             }});
         }}
@@ -882,9 +776,7 @@ def generate_clean_viewer(documents, output_file='index.html'):
             const toast = document.getElementById('toast');
             toast.textContent = message;
             toast.classList.add('show');
-            setTimeout(() => {{
-                toast.classList.remove('show');
-            }}, 2000);
+            setTimeout(() => toast.classList.remove('show'), 2000);
         }}
     </script>
 </body>
@@ -893,51 +785,45 @@ def generate_clean_viewer(documents, output_file='index.html'):
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
-    print(f"✅ Clean scientific viewer generated: {output_file}")
+    print(f"✅ Simplified viewer generated: {output_file}")
     return output_file
 
 def main():
-    """Main function"""
+    # Try to load from samples first (for GitHub Pages)
+    samples_file = Path('samples/samples.json')
 
-    # Check for OCR results in results/ directory
-    results_dir = Path('results')
-    if not results_dir.exists():
-        print("⚠ No results/ directory found. Run OCR processing first.")
-        print("💡 Looking for alternative data...")
+    if samples_file.exists():
+        print("✓ Loading from samples/ (GitHub Pages mode)")
+        try:
+            documents = load_ocr_results(samples_file)
+            print(f"✓ Loaded {len(documents)} documents from samples")
+            for doc_id, data in documents.items():
+                total = data.get('total_pages', len(data.get('pages', [])))
+                print(f"  - {doc_id}: {len(data.get('pages', []))} sample pages (of {total} total)")
+        except Exception as e:
+            print(f"⚠ Error loading samples: {e}")
+            documents = {}
+    else:
+        # Fallback to full results
+        print("✓ Loading from results/ (full mode)")
+        results_dir = Path('results')
+        documents = {}
 
-    # Try to find any JSON files with OCR results
-    documents = {}
-
-    # Pattern 1: results/mets_*/doc_ocr_cleaned.json
-    if results_dir.exists():
-        for result_file in results_dir.glob('*/*_ocr_cleaned.json'):
-            doc_id = result_file.stem.replace('_ocr_cleaned', '')
-            try:
-                data = load_ocr_results(result_file)
-                documents[doc_id] = data
-                print(f"✓ Loaded: {doc_id} ({len(data.get('pages', []))} pages)")
-            except Exception as e:
-                print(f"⚠ Error loading {result_file}: {e}")
-
-    # Pattern 2: results/pdf_*/results_cleaned.json
-    if results_dir.exists():
-        for result_file in results_dir.glob('*/results_cleaned.json'):
-            doc_id = result_file.parent.name
-            if doc_id not in documents:
+        if results_dir.exists():
+            for result_file in results_dir.glob('*/*_ocr_cleaned.json'):
+                doc_id = result_file.stem.replace('_ocr_cleaned', '')
                 try:
                     data = load_ocr_results(result_file)
                     documents[doc_id] = data
                     print(f"✓ Loaded: {doc_id} ({len(data.get('pages', []))} pages)")
                 except Exception as e:
-                    print(f"⚠ Error loading {result_file}: {e}")
+                    print(f"⚠ Error: {e}")
 
     if documents:
-        output_file = generate_clean_viewer(documents)
-        print(f"\n🎉 Clean scientific viewer ready!")
-        print(f"📂 Open in browser: {os.path.abspath(output_file)}")
+        generate_simple_viewer(documents)
+        print(f"\n🎉 Viewer ready: index.html")
     else:
-        print("\n❌ No OCR results found")
-        print("💡 Run test_ocr_mets.py or test_ocr_pdf.py first to generate results")
+        print("❌ No OCR results found")
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,64 @@
+{
+  "mets_metadata": {
+    "title": "Abwesenheitsnotiz II, SZ-SAM/L18",
+    "signature": "SZ-SAM/L18",
+    "author": "Zweig, Stefan",
+    "language": "de",
+    "owner": "Literaturarchiv Salzburg, https://stefanzweig.digital, CC-BY",
+    "urn": "info:fedora/o:szd.151"
+  },
+  "logical_structure": [
+    {
+      "id": "U.1",
+      "type": "Abwesenheitsnotiz II"
+    },
+    {
+      "id": "U.2",
+      "type": "Farbreferenz/Schluss"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "file_id": "IMG.1",
+      "image_file": "IMG_1.jpg",
+      "text": "Ihr freundliches Schreiben erreicht mich leider in einer Zeit,\n\nda mir aus persönlichen Gründen eine wirklich eingehende\n\nBeantwortung nicht möglich wird.\n\nWollen Sie dies mit Nachsicht zugute halten\n\nIhren ergebenen",
+      "characters": 216,
+      "time_seconds": 4.26,
+      "original_characters": 216,
+      "cleaned_characters": 216,
+      "filtered": 0
+    },
+    {
+      "page": 2,
+      "file_id": "IMG.2",
+      "image_file": "IMG_2.jpg",
+      "text": "[EMPTY PAGE - FILTERED]",
+      "characters": 8019,
+      "time_seconds": 95.28,
+      "original_characters": 8019,
+      "cleaned_characters": 23,
+      "filtered": 7996
+    },
+    {
+      "page": 3,
+      "file_id": "IMG.3",
+      "image_file": "IMG_3.jpg",
+      "text": "Ihr freundliches Schreiben erreicht mich leider in einer Zeit,\n\nda mir aus personlichen GroBen eine wirklich eingebende\n\nBeantwortung nicht moglich wird.\n\nWollen Sie die mit Nachsicht zugute halten\n\nIhrem ergebenen",
+      "characters": 411,
+      "time_seconds": 7.85,
+      "original_characters": 411,
+      "cleaned_characters": 214,
+      "filtered": 197
+    }
+  ],
+  "total_pages": 3,
+  "successful": 3,
+  "failed": 0,
+  "is_sample": true,
+  "sample_indices": [
+    0,
+    1,
+    2
+  ]
+}
