@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# OCR Results
+results/
+
+# Backup files
+*.backup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large files (optional - uncomment if needed)
+# data/*.pdf

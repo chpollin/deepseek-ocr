@@ -1,0 +1,24 @@
+# DeepSeek-OCR Requirements
+# Python 3.11+
+# NVIDIA GPU with 16+ GB VRAM
+
+# Core Dependencies
+torch==2.6.0
+torchvision==0.21.0
+transformers==4.46.3
+tokenizers==0.20.3
+
+# Image Processing
+pillow>=10.0.0
+
+# Model Dependencies
+einops>=0.8.0
+addict>=2.4.0
+easydict>=1.13
+
+# Optional: API-Zugang (Fallback)
+gradio-client>=1.5.0
+
+# Evaluation (für compare_results.py)
+python-Levenshtein>=0.25.0
+jiwer>=3.0.0  # WER calculation
