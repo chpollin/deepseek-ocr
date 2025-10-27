@@ -1,145 +1,233 @@
-# DeepSeek-OCR Evaluation Project
+# DeepSeek-OCR Evaluation Framework
 
-**Ziel:** DeepSeek-OCR auf **gedruckten deutschen Dokumenten** testen und evaluieren
+> AI-powered OCR pipeline for printed documents with METS metadata support and interactive visualization
 
-## Project Scope
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://chpollin.github.io/deepseek-ocr/)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/pytorch-2.6.0-red)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/license-research-orange)](LICENSE)
 
-**IN SCOPE:**
-- ✅ OCR für gedruckte Texte (PDFs, Scans, Screenshots)
-- ✅ Formeln, Tabellen, strukturierte Layouts
-- ✅ Mehrsprachige Dokumente (Deutsch, Englisch, etc.)
-- ✅ Quantitative Evaluation (CER, WER, Performance)
+---
 
-**OUT OF SCOPE:**
-- ❌ Handschrifterkennung (HTR)
-- ❌ Historische Dokumente (Kurrentschrift)
-- ❌ Handgeschriebene Notizen
+## 🎯 Overview
 
-## Hardware Requirements
+Complete OCR evaluation pipeline for processing **printed documents** (METS archives, PDFs) using DeepSeek-OCR:
 
-**Verfügbar:**
-- GPU: RTX 4080 (16 GB VRAM) ✅
-- CUDA: 13.0 ✅
-- RAM: 16+ GB (empfohlen) ✅
+- 📄 **METS Support** - Process digital archive documents with XML metadata
+- 📑 **PDF Processing** - Direct PDF-to-OCR conversion (tested with 595 pages)
+- 🔍 **Artifact Filtering** - Automatic removal of color cards, measurements, reference marks
+- 📊 **Interactive Viewer** - Side-by-side image/text comparison with zoom
+- 🌐 **GitHub Pages** - Lightweight sample deployment (5-10 pages per document)
+- 📈 **Detailed Reports** - Statistics, CER metrics, full transcriptions
 
-**Ergebnis:** Perfekt für lokale DeepSeek-OCR Inferenz!
+---
 
-## Quick Start
+## 🚀 Quick Start
 
-### 1. Setup Environment
+### Installation
+
 ```bash
-python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
+# Clone repository
+git clone https://github.com/chpollin/deepseek-ocr.git
+cd deepseek-ocr
 
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or: ./venv/Scripts/activate (Windows)
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Test OCR on Sample Document
+### Process Documents
+
 ```bash
-python test_ocr_simple.py
+# METS document
+python test_ocr_mets.py data/o_szd.151/
+
+# PDF
+python test_ocr_pdf.py data/document.pdf
+
+# Create samples for GitHub Pages
+python create_samples.py
+
+# Generate interactive viewer
+python generate_viewer_simple.py
+
+# View locally
+python -m http.server 8000
+# Open http://localhost:8000/
 ```
 
-### 3. Process Multiple Documents
-```bash
-python test_ocr_batch.py data/printed_docs/
-```
+---
 
-### 4. Evaluate Results
-```bash
-python compare_results.py
-```
+## 📊 Results
 
-## Project Structure
+| Document | Lang | Pages | CER | Status |
+|----------|------|-------|-----|--------|
+| **o:szd.151** | DE | 3 | ~2-3% | ✅ Complete |
+| **o:szd.196** | FR | 9 | N/A | ✅ Complete |
+| **DTS_Flechte.pdf** | DE | 595 | TBD | 🔄 Processing |
+
+**Live Demo:** [https://chpollin.github.io/deepseek-ocr/](https://chpollin.github.io/deepseek-ocr/)
+
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| **Model** | [DeepSeek-OCR](https://huggingface.co/deepseek-ai/DeepSeek-OCR) (3B params, BF16) |
+| **Framework** | PyTorch 2.6.0, Transformers 4.46.3 |
+| **PDF** | PyMuPDF (fitz) |
+| **CUDA** | 11.8 / 13.0 |
+| **Frontend** | Vanilla HTML/CSS/JS (no frameworks) |
+
+**Hardware:** RTX 4080 (16 GB VRAM) recommended
+
+---
+
+## 📂 Project Structure
 
 ```
 deepseek-ocr/
-├── data/
-│   ├── printed_docs/          # Gedruckte Test-Dokumente
-│   │   ├── sample_01.pdf
-│   │   ├── sample_02.png
-│   │   └── ground_truth/      # Manuell transkribierte Referenzen
-│   └── _archive/               # Alte Handschrift-Daten (ignoriert)
-│       ├── szd-letter-htr/
-│       └── km-karteikarten/
-├── knowledge/
-│   ├── README.md              # Projekt-Überblick
-│   ├── TECHNICAL.md           # Technische Details
-│   ├── LEARNINGS.md           # Lessons Learned
-│   └── TEST_RESULTS.md        # Test-Ergebnisse
-├── results/                   # OCR Outputs
-├── venv/                      # Python Environment
-├── requirements.txt           # Dependencies
-├── test_ocr_simple.py        # Einzelner Test
-├── test_ocr_batch.py         # Batch-Processing
-└── compare_results.py        # Evaluation
+├── docs/                         # 📚 Obsidian Vault Documentation
+│   ├── 00-Index.md              # Overview & quick navigation
+│   ├── 01-Quick-Start.md        # Installation & usage
+│   ├── 02-Architecture.md       # System design & data flow
+│   ├── 03-Results.md            # Evaluation & metrics
+│   └── 04-Learnings.md          # Best practices & tips
+├── samples/                      # 🎨 GitHub Pages deployment
+│   ├── images/                  # Sample images (12 total)
+│   ├── *_sample.json            # Viewer data
+│   ├── *_full.json              # Complete data
+│   ├── *_transcription.txt      # Full transcriptions
+│   └── *_report.md              # Statistical reports
+├── data/                         # 📂 Input documents
+│   ├── o_szd.151/               # METS (German, 3 pages)
+│   ├── o_szd.196/               # METS (French, 9 pages)
+│   └── DTS_Flechte.pdf          # PDF (595 pages)
+├── results/                      # 💾 OCR outputs
+│   ├── mets_*/                  # METS processing results
+│   └── pdf_*/                   # PDF processing results
+├── index.html                    # 🌐 Interactive viewer
+├── test_ocr_mets.py             # METS document processor
+├── test_ocr_pdf.py              # PDF processor
+├── filter_artifacts.py          # Artifact detection & removal
+├── create_samples.py            # Sample generator for GitHub Pages
+├── generate_viewer_simple.py    # Viewer generator
+├── clean_ocr_results.py         # Apply filters to results
+└── requirements.txt             # Python dependencies
 ```
 
-## Current Status
+---
 
-| Task | Status | Details |
-|------|--------|---------|
-| Environment Setup | ✅ | Python 3.11.9, PyTorch 2.6.0+cu118 |
-| Model Download | ✅ | DeepSeek-OCR (6.7 GB) cached |
-| Hardware Verification | ✅ | RTX 4080, 16 GB VRAM |
-| Single Document Test | ✅ | Script funktioniert |
-| Test Data Collection | ⏳ | Gedruckte Dokumente benötigt |
-| Batch Processing | ⏹️ | Noch nicht implementiert |
-| Evaluation Framework | ⏹️ | CER/WER noch nicht implementiert |
+## ✨ Features
 
-## Next Steps
+### OCR Processing
+- **METS XML Parsing** - Extract metadata (title, author, URN, language)
+- **PDF Conversion** - High-quality 300 DPI image extraction
+- **Batch Processing** - Sequential page-by-page processing
+- **Progress Tracking** - Real-time character count and timing
 
-1. **Test-Dokumente sammeln:**
-   - PDFs (wissenschaftliche Papers, Artikel)
-   - Screenshots (Webseiten, Präsentationen)
-   - Gescannte Bücher/Zeitschriften
-   - Formeln und Tabellen
+### Artifact Filtering
+- **Pattern-Based Detection** - Keywords, regex, structural analysis
+- **Effectiveness** - 47-99% noise reduction on test documents
+- **Categories** - Color references, measurements, scale markers
 
-2. **Ground Truth erstellen:**
-   - Manuell korrekte Transkriptionen
-   - Oder: OCR auf sehr klaren Dokumenten
+### Interactive Viewer
+- **Side-by-Side Comparison** - Original image vs OCR text
+- **Zoom & Pan** - Mousewheel zoom, drag to navigate
+- **Thumbnail Navigation** - Quick page selection
+- **Keyboard Shortcuts** - ←→ (pages), +- (zoom), C (copy)
+- **Export Functions** - Download text, download image
 
-3. **Batch-Processing implementieren:**
-   - Mehrere Dokumente automatisch verarbeiten
-   - Ergebnisse strukturiert speichern
+### GitHub Pages Support
+- **Smart Sampling** - 5-10 evenly distributed representative pages
+- **Lightweight** - < 10 MB total (vs 1+ GB for full data)
+- **Full Access** - Complete transcriptions and data available as downloads
 
-4. **Evaluation:**
-   - CER/WER berechnen
-   - Geschwindigkeit messen
-   - Qualitative Analyse (Fehlertypen)
+---
 
-## Use Cases für DeepSeek-OCR
+## 📖 Documentation
 
-### Ideal:
-- 📄 PDFs digitalisieren
-- 🧮 Formeln extrahieren
-- 📊 Tabellen in Markdown konvertieren
-- 🌐 Mehrsprachige Dokumente
-- 📚 Gescannte Bücher
+Comprehensive documentation in Obsidian-compatible Markdown:
 
-### Nicht geeignet:
-- ✍️ Handschrifterkennung
-- 🏛️ Historische Dokumente
-- 📝 Notizen, Skizzen
+- **[00-Index.md](docs/00-Index.md)** - Project overview & navigation
+- **[01-Quick-Start.md](docs/01-Quick-Start.md)** - Installation & usage examples
+- **[02-Architecture.md](docs/02-Architecture.md)** - System design & components
+- **[03-Results.md](docs/03-Results.md)** - Performance metrics & evaluation
+- **[04-Learnings.md](docs/04-Learnings.md)** - Best practices & troubleshooting
 
-## Performance (RTX 4080)
+**View in Obsidian:** Open `docs/` folder as vault
 
-```
-Model Loading:     ~5 min (first time, dann cached)
-Inference:         ~10-30 sec per image
-Throughput:        ~120-360 pages/hour
-VRAM Usage:        ~10 GB
-```
+---
 
-## Links
+## 🎯 Use Cases
 
+### ✅ Ideal For
+- 📄 Digitalizing printed documents
+- 📊 Extracting text from scanned PDFs
+- 🏛️ Processing digital archives (METS format)
+- 🌐 Multi-language documents (DE, EN, FR, ...)
+- 🔢 Documents with formulas and tables
+
+### ❌ Not Suitable For
+- ✍️ Handwriting recognition
+- 🏛️ Historical scripts (Kurrent, Fraktur)
+- 📝 Handwritten notes
+- 🎨 Complex artistic layouts
+
+---
+
+## 🔬 Performance
+
+| Metric | Value | Hardware |
+|--------|-------|----------|
+| **Model Load** | ~30-45s | First run (cached after) |
+| **OCR per Page** | ~15-20s | RTX 4080 |
+| **Throughput** | 120-360 pages/hour | Varies by content |
+| **VRAM Usage** | ~10 GB | During inference |
+| **Accuracy (DE)** | ~97-98% | CER on test docs |
+
+---
+
+## 🤝 Contributing
+
+This is a research project. Contributions, issues, and feature requests are welcome!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing`)
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+Research use only. See [LICENSE](LICENSE) for details.
+
+---
+
+## 🔗 Links
+
+- **Live Demo:** https://chpollin.github.io/deepseek-ocr/
 - **Model:** https://huggingface.co/deepseek-ai/DeepSeek-OCR
-- **GitHub:** https://github.com/deepseek-ai/DeepSeek-OCR
-- **Paper:** Coming soon
+- **Documentation:** [docs/](docs/)
+- **Issues:** https://github.com/chpollin/deepseek-ocr/issues
+
+---
+
+## 🙏 Acknowledgments
+
+- **DeepSeek AI** - For the excellent OCR model
+- **Stefan Zweig Digital** - For METS test data
+- **PyMuPDF** - For reliable PDF processing
 
 ---
 
 **Last Updated:** 2025-10-27
-**Hardware:** RTX 4080 (16 GB VRAM)
-**Python:** 3.11.9
-**Status:** Ready for printed document OCR testing
+**Status:** Active Development
+**Maintainer:** Research Team
