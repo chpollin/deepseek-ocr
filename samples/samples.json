@@ -265,5 +265,48 @@
     "sample_indices": [
       0
     ]
+  },
+  "DTS_Flechte_20pages": {
+    "mets_metadata": {
+      "title": "Die Flechten Tirols (Sample: 2 pages)",
+      "signature": "DTS-Flechte",
+      "author": "Dalla Torre, K. W. von; Sarnthein, L. von",
+      "language": "de",
+      "owner": "Botanisches Institut Innsbruck",
+      "urn": "info:fedora/o:DTS_Flechte_20pages"
+    },
+    "pages": [
+      {
+        "page": 1,
+        "file_id": "page_001",
+        "image_file": "page_001.png",
+        "text": "# Lichtenes.\n\n## A. Lichtenes heteromerici.\n\n1. Fam. Usneaecae.\n\n1. Usnea Hofm.\n\n1. (1.) U. barbata (L.) Hofm., Deutschl. Fl. II. (1795) p. 132\nlichen barbatus L., Spec. pl. (1753) p. 1155. — Arn. Nr. 1.\n\nGemein bis in die Alpenregion an den Stammen, Aesten und\nZweigen (namentlich abgedorrten) der verschiedensten Holzpflanzen,\nbesonders Coniferen, auch an Lichtenzapfen beobachtet, weniger an\nLaubholzern, noch seltener an niedrigen Sträuchern, z. B. Rhododendron, Calluna; häufig an alten Zaunholze, Schindeln etc.; sehr\nselten auf Gestein und zwar:\n\n0 Stanzerthal in Spuren (Arn. 4 XV. p. 361, 364, 365, 378).\nB Jenesien: in kleinen Zweiglein von Föhren auf Porphyr übersiedelnd\n(Kst. 4 III. p. 703).\n\nAeltste Angabe: N Nonsberg (Mattioli 1 ed. 1585 p. 69). Die be-\ntreffende Stelle lautet wie folgt: „Galeno . . . e Paolo Epinetà non\ntacendosi del Mosco del cedro oltre a quello dell' oppio et della quercia,\nscrisserò anchora di quello, che nasce in su 'l pezzo, albero molto\nsimile all' abete. Dal qual nelle più alte montagne della valle Anania\ndel distretto di Trento, più et più nolle ho ricollo io il Mosco, molto\npiu odorato, et uistoso di quello dell' oppio et della quercia. Non\nha di questo men buono odore quello dell' abete: del quale ho uisto\nin alcune selue tanto carichi gli alberi, che molto più co 'l mosco,\nche con le frondi adombrauano il luogo, di modo che par nel primo\nSguardo che cotali alberi habbiano il mosco per frondi.\" Hiezu muss\nbemerkt werden, dass sich die Beratmung Krempelhubers (Gesch.\nu. Litt. I. p. 10), wonach „Muscus arboreus\" des Mattioli der Usnea\nceratina entspricht, nicht darauf, sondern auf die darüber befindliche,\neinen mit Usnea behangenen Eichnzweig darstellende Figur bezieht.\n\na) florida (L.) Schaer., Enum. (1850) p. 3, Lichen floridus L.,\nSpec. pl. (1753) p. 1156.",
+        "characters": 1822,
+        "time_seconds": 19.64,
+        "original_characters": 1822,
+        "cleaned_characters": 1822,
+        "filtered": 0
+      },
+      {
+        "page": 2,
+        "file_id": "page_002",
+        "image_file": "page_002.png",
+        "text": "„pl. tenella\".\n\n**O Station Oetzthal an dünnen Lärchenzweigen (Arn. 4 XXV. p. 404).**\n\npl. „minuta, compacta\".\n\n**O Auf Zaunholz: Galtür (Arn. 4 XXVII. p. 106); Marlstein gegen**\nKühetai (Arn. 4 XXII., Exs. Nr. 1017).\n\nb) hirta (L.) Schaer., Enum. (1850) p. 3, Lichen hirtus L., Spec.\npl. (1753) p. 1155, Usnea hirta Hoffm., Deutschl. Fl. II. (1795) p. 133.\nVorzüglich an trockenen Stellen (Arn. 4 XVI. p. 409).\n\n**O Station Oetzthal: hauptsächlich an rissiger Föhrenrinde, gerne**\nsteril (Arn. 4 XXV. p. 404); Kühetai: steril auf dem Holze alter\nBaumstrünke nicht häufig, auch an den hölzernen Pfosten der Garten-\neinfassung (Arn. 4 XIV. p. 466).\n\n**I Innsbruck: an einem Gartenzaune bei IgIs (Pkt. Hb. F.) ; Waldrast:**\nan Heudillen am Wege zum Jöchl (Pkt. b. DT. 10 p. 258, Hb. F.);\nsteril an Fichtenstrünken bei der oberen (Arn. 4 XVI. p. 1142, XI.\np. 516).\n\n**K Mit a) florida an Fichtenstämmen, auch an Zäunen und Gneiss-**\nblöcken (Ung. 8 p. 257).\n\n**P Ehrenburg: auf Holz, dann auf Lärchen- und Ahornrinde' (Kst. 4**\nVII. p. 291, 293); Taufers: steril und selten über bemoosten Granit-\nblöcken am Wege nach Rain, selten und dürftig an sonnigen\nBrettern der Kirchhofmauer in Rain 1590 m (Arn. 4 XIX. p. 274,\n276); Ampezzo: steril häufig an dürren Zirbenästen gegen den Dürren-\nstein und im Val Grande, auch bei Schilderbach, steril an dürren\nNadelholzästen zwischen Schilderbach und Ospedale 1445 m (Arn. 4\nXVI. p. 409, 406).\n\n**B Sarnthal: Möllnkerkaser (Kst. 4 VI. p. 207); Jenesien an Zaunholz**\nund Pfosten, an Lärchenästen, Zweigen und -Zapfen, an Prunus\nspinosu, Betula (Kst. 4 III. p. 719, 723, 733, V. p. 342, VI. p. 224);\nRitten (Hsm. Hb. F.; Pfaff); Gröden: an Zirben bei der Regensburger-\nhütte (Arn. 4 XXVIII. p. 114); Ratzes auf Alnus incana (Milde 29 p. 21),\nsteril am Fichtenzaune des Badhauses (Arn. 4 IV. p. 620); Bozen:\nsteril nicht häufig, an Föhren der Kaiserau, auf altem Weingartholz\nin Haslach (Kst. 2 p. 8); hinteres Eggenthal auf Planken (Kst. 4 II.\np. 340).\n\n**F Predazzo: an der rissigen Rinde älterer Lärchen, am Fusswege**\nnach Ziano (Arn. 4 XXIII. p. 144, Exs. Nr. 967b).\n\n**G Pinzolo: am Corno alto auf Fichten und Lärchen (Kst. 4 I. p. 337).**\n\nc) sorediifera Arn., Exs. Nr. 572, Flora LVII. (1874) p. 569\nsine deser.\n\n**O Stanzerthal: auf Rhododendron, westlich oberhalb St. Anton:**\na) florida in c) sorediifera übergehend, in kleinen Exemplaren nicht\nselten: Exs. Nr. 1538, an Lärchen zweigen zwischen Pettneu und\nSt. Jakob, mit Cephalodien (Arn. 4 XXV. p. 398, 393); bei der Bahn-\nstation Oetzthal (Arn. 4 XXV. p. 404).\n\n**I Seefeld: im Fichtenwalde längs der Strasse nach Scharnitz steril**",
+        "characters": 2634,
+        "time_seconds": 31.59,
+        "original_characters": 2634,
+        "cleaned_characters": 2634,
+        "filtered": 0
+      }
+    ],
+    "total_pages": 2,
+    "successful": 2,
+    "failed": 0,
+    "is_sample": true,
+    "sample_indices": [
+      0,
+      1
+    ],
+    "note": "Sample: Only 2 of 20 pages processed successfully"
   }
 }
