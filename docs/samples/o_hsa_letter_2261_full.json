@@ -1,0 +1,43 @@
+{
+  "o_hsa_letter_2261": {
+    "mets_metadata": {
+      "title": "HSA Letter 2261 - Nobel Prize Candidature",
+      "signature": "HSA-2261",
+      "author": "Berluc-Perussis, Koschwitz, Bertuch",
+      "language": "fr",
+      "owner": "OCR Result",
+      "urn": "ocr:o_hsa_letter_2261"
+    },
+    "pages": [
+      {
+        "page": 1,
+        "file_id": "page_1",
+        "image_file": "image.1.jpg",
+        "text": "[C] [e] [a] [j]\n    Trés-urgent.\n    Trés-honoré [lionsieur,]\n    Le prix littéraire de la fondation Nobel sera distribué pour\n    la première fois en Décembre 1901. Les propositions motivées, que peut\n    présenter tout membre d'une Académie et tout professeur d'Université\n    pour les lettres, doivent être adressées avant le 1er Février a Svenska\n    nature de l'envoi, auquel les ouvrages littéraires proposés pour le\n    prix doivent être joints.\n    Il semble qu'aucun écrivain allemand n'est candidat.\n    Quinze membres de l'Académie française proposent M.Sully-\n    Vallery Radot.\n    Dans le midi de la France - malheureusement un peu tard, dans\n    l'ignorance où l'on était du réglement de la fondation Nobel - on a\n    mis en avant Frédéric Liistral. Se faisant l'interprète des nombreux\n    admis d'ratleurs du poète provençal, le D[2] Koschwitz, professeur à\n    l'Université de Liarbourg, a proposé la candidature de Liistral. i. Gaston\n    Paris déclare que s'il avait eu plus tôt connaissance de cette proposi-\n    tion il s'y serait certainement rallié.\n    Il y aurait un grand intérêt à ce que la candidature de\n    nombre de savants compétents et ayant droit de proposition aux termes\n    du réglement; aussi, convaincus que vous n'hésiterez pas à donner\n    avec nous la préférence à Liistral, le poète incomparable, le rénova-\n    teur d'une langue littéraire et l'auteur du Trésor du Félibrige, nous\n    vous prions de bien vouloir ou proposer directement la candidature de\n    Koschwitz, Liarburg a. L. Allemagne, une lettre exprimant votre assen-\n    timent à la proposition par lui présentée.\n    En vous remerciant par avance de votre précieux concours, nous\n    nous permettons d'insister sur la nécessité d'agir au plus vite, étant\n    donné le court délai qui restera avant le premier Février, date à laquelle\n    le les propositions doivent être arrivées à Stockholm.\n    Veuillez agréer l'assurance de notre haute considération.\n    L. de Berluc - Perussis.\n    Ed. Koschwitz.\n    Aug. Bertuch.",
+        "characters": 2029,
+        "time_seconds": 22.5,
+        "original_characters": 2336,
+        "cleaned_characters": 2029,
+        "filtered": 307
+      }
+    ],
+    "total_pages": 1,
+    "successful": 1,
+    "failed": 0,
+    "is_sample": true,
+    "sample_indices": [
+      0
+    ],
+    "evaluation_metrics": {
+      "cer_percent": 21.87,
+      "wer_percent": 30.75,
+      "ground_truth_chars": 2135,
+      "ocr_chars": 2029,
+      "char_difference": -106,
+      "ground_truth_words": 324,
+      "ocr_words": 294,
+      "word_difference": -30
+    },
+    "ground_truth_path": "data/o_hsa_letter_2261/ground-trurth-transcription.txt"
+  }
+}
