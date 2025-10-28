@@ -66,7 +66,7 @@ def load_model():
 
     return tokenizer, model
 
-def perform_ocr(image_path, tokenizer, model):
+def perform_ocr(image_path, tokenizer, model, base_size=640, image_size=640, crop_mode=True, prompt='<image>\nExtract all text from this document.'):
     """
     Führt OCR auf einem Bild durch
 
@@ -74,11 +74,16 @@ def perform_ocr(image_path, tokenizer, model):
         image_path: Pfad zum Bild
         tokenizer: DeepSeek Tokenizer
         model: DeepSeek Model
+        base_size: Base size for vision encoder
+        image_size: Image size for local crops
+        crop_mode: Enable multi-crop processing
+        prompt: OCR prompt
 
     Returns:
         tuple: (ocr_text, time_seconds)
     """
     print(f"Processing: {Path(image_path).name}")
+    print(f"Settings: base_size={base_size}, image_size={image_size}, crop_mode={crop_mode}")
 
     # Lade Bild
     image = Image.open(image_path).convert('RGB')
@@ -91,16 +96,14 @@ def perform_ocr(image_path, tokenizer, model):
     temp_dir = Path("results") / "temp" / Path(image_path).stem
     temp_dir.mkdir(parents=True, exist_ok=True)
 
-    prompt = "<image>\nExtract all text from this document."
-
     model.infer(
         tokenizer,
         prompt=prompt,
         image_file=str(image_path),
         output_path=str(temp_dir),
-        base_size=640,
-        image_size=640,
-        crop_mode=True,
+        base_size=base_size,
+        image_size=image_size,
+        crop_mode=crop_mode,
         save_results=True,
         test_compress=True
     )
@@ -225,6 +228,10 @@ def main():
     parser.add_argument('image_path', help='Path to image file')
     parser.add_argument('--ground-truth', help='Path to ground-truth transcription file')
     parser.add_argument('--no-filter', action='store_true', help='Disable artifact filtering')
+    parser.add_argument('--base-size', type=int, default=640, help='Base size for vision encoder (default: 640, recommended: 1024)')
+    parser.add_argument('--image-size', type=int, default=640, help='Image size for local crops (default: 640)')
+    parser.add_argument('--no-crop', action='store_true', help='Disable crop mode (multi-tile processing)')
+    parser.add_argument('--prompt', default='<image>\nExtract all text from this document.', help='Custom prompt for OCR')
 
     args = parser.parse_args()
 
@@ -252,7 +259,15 @@ def main():
     print("OCR PROCESSING")
     print("="*60)
 
-    ocr_text, elapsed = perform_ocr(args.image_path, tokenizer, model)
+    ocr_text, elapsed = perform_ocr(
+        args.image_path,
+        tokenizer,
+        model,
+        base_size=args.base_size,
+        image_size=args.image_size,
+        crop_mode=not args.no_crop,
+        prompt=args.prompt
+    )
 
     # Artifact Filtering
     filtered_text = ocr_text
