@@ -1,0 +1,260 @@
+{
+  "wecker_antidotarium_1617": {
+    "mets_metadata": {
+      "title": "Antidotarium Generale et Speciale (Basel, 1617)",
+      "signature": "wecker_antidotarium_1617",
+      "author": "Johann Jacob Wecker",
+      "language": "la",
+      "owner": "OCR Result",
+      "urn": "ocr:wecker_antidotarium_1617"
+    },
+    "pages": [
+      {
+        "page": 1,
+        "file_id": "page_1",
+        "image_file": "0002_p002.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 3.57,
+        "original_characters": 21,
+        "cleaned_characters": 23,
+        "filtered": -2
+      },
+      {
+        "page": 2,
+        "file_id": "page_2",
+        "image_file": "0003_p003.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 3.27,
+        "original_characters": 653,
+        "cleaned_characters": 23,
+        "filtered": 630
+      },
+      {
+        "page": 3,
+        "file_id": "page_3",
+        "image_file": "0004_p004.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 2.39,
+        "original_characters": 653,
+        "cleaned_characters": 23,
+        "filtered": 630
+      },
+      {
+        "page": 4,
+        "file_id": "page_4",
+        "image_file": "0005_p005.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 2.26,
+        "original_characters": 67,
+        "cleaned_characters": 23,
+        "filtered": 44
+      },
+      {
+        "page": 5,
+        "file_id": "page_5",
+        "image_file": "0006_p006.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 66.79,
+        "original_characters": 8019,
+        "cleaned_characters": 23,
+        "filtered": 7996
+      },
+      {
+        "page": 6,
+        "file_id": "page_6",
+        "image_file": "0007_p007.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 2.25,
+        "original_characters": 653,
+        "cleaned_characters": 23,
+        "filtered": 630
+      },
+      {
+        "page": 7,
+        "file_id": "page_7",
+        "image_file": "0008_p008.jpg",
+        "text": "ANTIDOTARIVM\n\nGENERALE\n\n\nSPECIALE:\n\nEX OPT. A VTHORVM\n\ntam vetetrum,quam recentiorum\n\nferiptis fideliter e\n\nmethodice\n\nIOAN.IACOBO WECKERO Bafil\n\ncongeftum&difpo-\n\nfituum:\n\nNVNC VERO SVTRA PRIORES\n\neditiones omnes multis novis & optimis For-\n\nMULIS,maxime veruEXTRA-\n\nCTIS audium:\n\nAdjectis INDICIBUS locupletisfimis.\n\nBASILEAE,\n\nPer IOAN.IACOBUM GENATHIUM,\n\nSumptibus Ludovici Konig.\n\ncI b cxxvii.",
+        "characters": 398,
+        "time_seconds": 6.82,
+        "original_characters": 401,
+        "cleaned_characters": 398,
+        "filtered": 3
+      },
+      {
+        "page": 8,
+        "file_id": "page_8",
+        "image_file": "0009_p009.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 2.07,
+        "original_characters": 653,
+        "cleaned_characters": 23,
+        "filtered": 630
+      },
+      {
+        "page": 9,
+        "file_id": "page_9",
+        "image_file": "0010_p010.jpg",
+        "text": "IOAN. IACOBI WECKERI\n\nBASILIENSIS\n\n\nANTIDOTARIVM GE-\n\nminum ad Medicine Studios\n\nPRAEFATIO.\n\nTs i multa ac varia Antidotaria ( vulgo Difpenfato-\n\nriadiecta) ab antiquis simul & recentioribus Medicis in\n\nlucem emissa funt, rei medicae Studiofe L E C T O R:\n\ntamen, quod pace tantorum Virorum dictum velim,\n\nordinis diverfitas in multis fufpecta, ejusdem intertur-\n\nbatio non paucos neglectae methodi accufare videtur:\n\n\npolint. Inter Graecos primum merito locum obtinet Galenus, qui Me-\n\ndicamentorum hiftoriam diverfis litoris, pro occasione temporis, hor-\n\ntatu amicorum complexus eft. Undecim fane de Simplicium medica-\n\nmentorum facultatibus : duos de Antidotis: feptem de Compositione\n\nmedicamentorum per genera: de Theriaca ad Pifonem, unum: decem\n\ndeCompositione medicamentorum fecundum locos edidit, non ea\n\ntantum quae ad Sanitatem pertinent, verum etiam quae ad Ornatum\n\nfaciant,comprehendens. Paulus Aeginetae, quem Galeni fimiam qui-\n\ndam appellare non verentur, in Medicamentorum tractatione vel nul-\n\nlum, vel latem alphabeticum ordinem obfervavit. Oribatius ingenio\n\ndiligentiaque magnus, non multam in difpositione Medicamentorum\n\ncurum impendit. Inter Arabes, inventione praeftantiffimorum medi-\n\ncaminum infignes, tanquam Hybrida quidam Joan.Mefue, ut ex Graecis\n\n& Arabibus multa collegit medicamenta, ita Galeni ordinem imitari\n\nvoluit. Proinde quemadmodum Galenus de Medicamentorum tum\n\ngeneralium, tum cuique parti affectae familiarium compositione, pecu-\n\n\nlibrode Antidotis, Medicamenta generalia fectionibus duodecim, velu-",
+        "characters": 1547,
+        "time_seconds": 19.02,
+        "original_characters": 1685,
+        "cleaned_characters": 1547,
+        "filtered": 138
+      },
+      {
+        "page": 10,
+        "file_id": "page_10",
+        "image_file": "0011_p011.jpg",
+        "text": "denique lib. 5. fubjunxit Serapio librum de Antidotis, & librum de Tem-\n\nperamentis fimplicium, congcfitverius, quam digeftit. Nicolausde Com-\n\npotitis medicamentis Antidotarium edidit co ordine, quem multi inve-\n\nftigare, pauci invenire poffint. Ex recentioribus quam plurimi in hoc\n\nftadium defcendentes, uti ftudiumvoluntatemq; fuam Reipubl. compro-\n\nbant, ita nunc particularia generalibus, nunc artificialia naturalibus,\n\n\ntur. Ergo cum etiamnum in medio Antidotaria palma, ut ita loquar, pro-\n\npotita effet, cu Medicis praeftantiffimis, iisdemq; civibus & collegis meis,\n\n\naggreffus, idq; divino auxilio ad finem perduxi. De cujus methodo fi for-\n\nte quæras, refpondeo, obfervaffle me intanta medicamentorum varietate,\n\nid quod in aliis artibus & fcientiis omnibus fapicntiffimi quiq; viderunt,\n\n& obfervarunt: nempe, omnem legitmam docendi rationem conflare\n\npartim univerfalibus praeceptis, parum exemplis particularibus. Itaque\n\nhic quoq; geminas oportere Operis noftri partes conftituere. Unam uni-\n\nverfalem, quae verfeitur circa precepta univerfalia. Primum quidem de Me-\n\n\nmateria praeparantur exhibenturq;, aquae, Syrupi, Julapia, Decocta, Infu-\n\nfiones, Clyfteres, Gargarifmata, Errhina, Epithemata, Fomenta, Embro-\n\nchae, Infcffiones, Balnea, Olea, Species, Dragemata, Ele&uaria, Opiata, Co-\n\nfervae, Condita, Eclegmata, Extracta, Linimenta, Unguenta, Emplaftra,\n\nCataplafmata, Cerata, Dropaces, Syrupifmi, Tabulae, Trochifici, Colly-\n\nria, Apophlegmatifmi, Glandes, Peffi, Sacculi, & quæcunque hujus generis\n\nfunt aliae medicamentorum formae. Secundo de Medicamentorum quali-\n\ntatibus primis, eorumque quatuor ordinibus: praeterea de qualitatibus fe-\n\ncundis, Emollientib, fcilicet, Indurantibus, Rarefacientibus, Attrahenti-\n\nbus, Repellentibus, Purgantibus, Auduentibus, & ejus generis reliquis\n\nomnibus. Quemadmodum etiam tertio, de variis officiis & actionibus, tam\n\nMedico, quam Pharmacopo neceffaris, Infolatione medicamentorum\n\nfcilicet, Extractione, Infufione, Mollione, Diffolutione, Exficcatione,\n\n\nne, Expreffione, Putrefactione, Difftillatione, aliisq; omnis generis omni-\n\nbus. Eam ipfam ergo Operis noftri partem, quae circula univerfalia praece-\n\npta haec occupatur, GeneralEANTIDOTARIUM nuncupavimus.\n\nEtecontra partem alteram, quae verfatur circa particulares omnis generis\n\n\n&uariorum, Unguentorum & fimilium, Antidotarium SpecialE\n\nappellavimus:quod a fuperiori differt, fcuti praxisa Theoria: & proinde\n\nin hoc genere etiam Antidotarium generalem Medicamento-\n\nrum Theoriam, SpecialE vero Prax^in, five Hiftoriam complectetur.\n\nIdem vero hoc pofterius Antidotarium etiam in tres libros, ficuti prius,",
+        "characters": 2637,
+        "time_seconds": 37.0,
+        "original_characters": 2974,
+        "cleaned_characters": 2637,
+        "filtered": 337
+      },
+      {
+        "page": 11,
+        "file_id": "page_11",
+        "image_file": "0012_p012.jpg",
+        "text": "tentius vero parerga medica (ne quid huc tra&ationi videretur deesse)\nadornatum spectantia continet. Nam cum & priscj, Archigenes, Aicle-\npiades, Crito, Cleopatra, Heras, Soranus, quod apud Galenumlibro de\nCompositione medicamentorum secundum locos, videre licet, hac de\nmateria scripserint: Neotericorum quincetiam non pauci, Itali potiffimum\n& Galli, gentis suae in ornandis corporibus morem secuti, Cosmica tra-\ndaverint: nihil me ab officio Medici alienum, fi illos certa methodo fe-\nquerer, facturum putavi. In fingularium medicamentorum enarratione\ncausas, effectus & accidentia, quanta potuimus diligentia,examinavimus,\n& declaravimus ex praestantiffimis quibusque, non solum Graecis & Ara-\nbibus, verum etia Latinis, Italis, Gallis, Hispanis, & Germanis (quorum ca-\ntalogum paulo post subnectemus) optima quaeque & seligendo, & dige-\nrendo: quorum usus & Medicis & Pharmacopoeis maximus esse posfit.\nMedicis quidem, ob remediorum copiam, methodicamque rationem,ut\nquinfe labore ex hoc Opere, medicamentaad quavis corporis mala, tan-\nquam expromptuario facile invenire quent: Pharmacopoeis vero, ad me-\nliorem & diligentiorem praeparationem, tractationemque. Haec sunt,ami-\ncelecto R, quae tecum de nostro rationem in aliis Medicis operibus\nQuod si tuis usibus ulla ratione inscrivei, ut mihi id gratiffimum erit, ita\noperam deinceps dabo, ut ocii nostri rationem in aliis Medicis operibus\nperficiendis Aclepiciadarum ampliffimo ordini comprobem. Tu inacrea\nhisce fruere: & si noftrum hunc laborem Reipublicae utilem putas, gene-\nrofo Heroi Lazzaro Suendio, Cafareae Majeftatis Polemarcho,\nbelli pacisque artibus clariffimo, gratias habe: cujus hortatu animus sa-\npe, quantumvis languentibus corporis virebus, nobis ad haec conficien-\nda refitutus, vel fallem excitatus fuit. Cujus itidem suauu tantum no-\nbis acceffit audaciae, ut invicto Cafari vigilias hasce noftras dedicare-\nmus, eique uni prae caeterisfudia noftra comprobare niteremur,\ncui placuisse non ultima, fed folidiffima laus eft.\nVale, Colmariae, Idib. Auguft.\nM. D. Lxxiv.",
+        "characters": 2045,
+        "time_seconds": 22.26,
+        "original_characters": 2045,
+        "cleaned_characters": 2045,
+        "filtered": 0
+      },
+      {
+        "page": 12,
+        "file_id": "page_12",
+        "image_file": "0013_p013.jpg",
+        "text": "AD LECTOREM.\n\nQuidnonprompta fuomanus labore,\n\nVel virtute sua domat voluntas?\n\nQuidnon ingenii vigoretandem\n\nMens, aut adduofacebit ufu?\n\nSi spectes animum (benigne Lector)\n\nW eckeripietas, amor, fidesg,\n\nVt curfus Medicea uvetur artis,\n\nSpectantur vario polita cultu.\n\n\nEt quas cungu fovet referre dotes:\n\nW eckerum Medicos videbis inter\n\nEffulgere graves es eruditos:\n\nDoctas ingenio manus, es ufu,\n\nVirtuti famulas, es obfequentes,\n\nSi spectare libet: Reguntur arte,\n\nEt nullos fugiunt manus labores.\n\nCum fit mentis Honos: manus g merces,\n\nEt virtutis amor: videntur esse\n\nW eckerofabiti probatajure,\n\nLaus, merces, es amorremuneranda.\n\nNIC. TAURELLUS M. D.\n\nAVTHO-",
+        "characters": 670,
+        "time_seconds": 8.05,
+        "original_characters": 700,
+        "cleaned_characters": 670,
+        "filtered": 30
+      },
+      {
+        "page": 13,
+        "file_id": "page_13",
+        "image_file": "0014_p014.jpg",
+        "text": "**AVTHORES, EX QVIBVS**\n\n**HOC OPUS CONCIN-**\n\n**natum eft.**\n\n**Acharius.** **Baffanus.** **Fermon.**\n\n**Adamus Lonicerus.** **Benedictus Vidi'rinus** **Fefius.**\n\n**Adolphus Occo.** **Faventinus.** **Fontanus.**\n\n**Aelius.** **Bernardini.** **Francisus de Gozdanus.**\n\n**Aelianus.** **Bertapalia.** **Francisus Pedemontanus.**\n\n**Albertus Magnus.** **Bertholdus.** **Fuchius.**\n\n**Alchindus.** **Biefius.** **Fumanellus.**\n\n**Alexander Benedictus.** **Brafavolus.** **Gabriel.**\n\n**Alexander Trallianus.** **Bruffonius.** **Gdenus.**\n\n**Alexius.** **Bardanus.** **Garciaus ab Hortes.**\n\n**Aloifius Bellicatto.** **Carolus Clufius.** **Gebor.**\n\n**Amatius Lufitanus.** **Carpenfis.** **Gentilis F- Ignas.**\n\n**Altomarius.** **Carpus.** **Gereo.**\n\n**Ambrofius Jung.** **Cafparus Bauhinus.** **Gefnerus.**\n\n**Americus de Aleffo.** **Chrifopborus a Vega.** **Gibertus de Anglia.**\n\n\n**Andernacus.** **Conradus de Sindelfingen.** **Guainerius.**\n\n**Andreas a Glauuen.** **Conftantinus.** **Guido.**\n\n**Andreas a Lacuna.** **Cordus.** **Halienus.**\n\n**Andromachus.** **Cofinus.** **Heben Zezer.**\n\n**Angelus Bononienfis.** **Crefcentius.** **Helidius.**\n\n**Angelus de Tarento.** **Crito.** **Hera.**\n\n**Anselmus de Janua.** **Cronenburgius.** **Hercules Saxonia.**\n\n**Antaus.** **Damianus.** **Hermes.**\n\n**Antonius Chalmeteus.** **Damocrates.** **Hieronymus Brunfucenfis.**\n\n**Antonius de Scarparia.** **Democritus.** **Hieronymus Fracaffo ius.**\n\n**Antonius Mufa.** **Diofcorider.** **Hieronymus Herold.**\n\n**Aparitius de Zubia.** **Dodonaus.** **Hieronymus Mercarialis.**\n\n**Apollo.** **Dymus Florentinus.** **Hieronymus Rabcus.**\n\n**Apuleius.** **Buonymus.** **Hippocrates.**\n\n**Archelaus.** **Fallopius.** **Holderius.**\n\n**Archigenes.** **Felix Platerus.** **Hugo Bauhinus.**\n\n**Arnoldus de Vilna nova.** **Fernelius.** **Jacobus Beffanus.**\n\n**Afclepiades.** **Fiafius Ferrarienfis.** **Jacobus Carpenfis.**\n\n**Avicenna.** **Fioravantus.** **Jacobus de Manlius.**\n\n**Baribol, Maranta.** **Florenzola.** **Jacobus Theodorus.**",
+        "characters": 2029,
+        "time_seconds": 24.84,
+        "original_characters": 2073,
+        "cleaned_characters": 2029,
+        "filtered": 44
+      },
+      {
+        "page": 14,
+        "file_id": "page_14",
+        "image_file": "0015_p015.jpg",
+        "text": "Joannes Agricola. Medic Agnuffani. Platearius.\n\nJoannes Baptista Porta. Medicis Bilienses. Plinius.\n\nJohannes Bauhinus. Medicis Bononienses. Princianus de Corduba.\n\nJoannes Crato. Medicis Loranienses. Rabi Mofes.\n\nFramnes de Sancto Amando. Medicis Ferraienses. Rhabis.\n\nJoannes de Tenis. Medicis Florentini. Ranzovius.\n\nJoannes de Vigo. Mejue. Regina Maria Caroli y.\n\nJoannes Heurnius. Mitzaldus. foror.\n\nJoannes Langius. Montagnana. Rogerius.\n\nJoannes Mag. Montanus. Rondeletius.\n\nJoannes Marinellus. Muralrus. Ruffus.\n\nJoannes Moibanus. Nerus. Saladinus.\n\nJoannes Schenckius. Nicodemus. Savonarola.\n\nJoannes Stockstai. Nicolaus Monardus. Scarpella.\n\nJoannis Cucherctanus. Nicolaus Tuerculus. Scrihcnus Largus.\n\nJofephus Quercetanus. Nicolaus Tuerellus. Serapio.\n\nHabella Cortefe. Nicolaus Florentinus. Servitor.\n\nIsaac. Nicolaus Stocker. StocKhaldus.\n\nJulius Casar Scaliger. Nicolaus de Graffis. Sylvius.\n\nLanfrancus. Oribafius. Tarentinus.\n\nLemnius. Orpheus. Thadaus Florentinus.\n\nLeonardus de Pradapalia. Paulus Aeglineta. Theodorus Zuingerus.\n\nLuminare majus. Paracelcius. Theophrastus.\n\nLeonellus Farentinus. Petrus Apinensis. Thefaurus Aromatariorum.\n\nLeo Suavius. Petrus Baryrus. Thomas Erastus.\n\nLucas Ghinus. Petrus B lionius. Trincavellus.\n\nLumen Aposthecariorum. Petrus de Bonanto. Trotula.\n\nManardus. Petrus Hifpanus. Tryphon.\n\nMagenbuch. Phadron. Varignana.\n\nMarfilius Ficinus. Phlegmus. Vilhelmus Placentinus.\n\nMartinus Rulandus. Philippus Villadius. Vrlicus ab Angelburg.\n\nMatthaus de Gradis. Pholostratus. Xenocrates.\n\nMatthiolus Senenfis. Pholoxenus. Zeuzar.\n\nANTI-",
+        "characters": 1583,
+        "time_seconds": 18.55,
+        "original_characters": 1583,
+        "cleaned_characters": 1583,
+        "filtered": 0
+      },
+      {
+        "page": 15,
+        "file_id": "page_15",
+        "image_file": "0016_p016.jpg",
+        "text": "ANTIDOTARIVM\n\nSPECIALE,\n\nIOAN. IACOBO WECKERO\n\nEXOPT. AVTHORVM\n\ntam ceterum, quam recentiorum,\n\nfideliter congeftum, & tandem metho-\n\ndice,fupra priores editiones,uberrime\n\nauctum,conjunctim editum,\n\n&exornatum:\n\nAdjectis Elenchiis locupletis.\n\nBASILEE,\n\nPer IO.IACOB.GENATH,Acad.Typogr.\n\nSumptibus Ludovici Konig.\n\ncIo Iocxvii.",
+        "characters": 328,
+        "time_seconds": 5.56,
+        "original_characters": 328,
+        "cleaned_characters": 328,
+        "filtered": 0
+      },
+      {
+        "page": 16,
+        "file_id": "page_16",
+        "image_file": "0017_p017.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 23,
+        "time_seconds": 10.97,
+        "original_characters": 226,
+        "cleaned_characters": 23,
+        "filtered": 203
+      },
+      {
+        "page": 17,
+        "file_id": "page_17",
+        "image_file": "0032_p032.jpg",
+        "text": "De balneis Montenbar. De balneo Porretano.\nDe Nunbad. De balneo Corfeno.\nDe balneo Saurenthal. De fanfia Maria in bagno.\nDe balneo Spiegelbergenf. De balneis de Aquis.\nDe balneo Schisenningenf. De balneo Petriolo.\nDe balneo Sylvefrt. De thermis Grotinis.\nDe balneis Tepicis. De thermis apud urbem veterem.\nDe balneis Perlingenfibus. De balneis Perufinis.\nDe balneo Villachenf. De balneis moniis Catini.\nDe balneo Waldsborn. De balneis Aquenfibus.\nDe balneo Weringenf. De balneis Siculis.\nDe balneo Olckenfteinenf. De balneis Aquariis,\nDe Zillerbad. De balneo Carpenf.\n\n\nA Qua optima est, quae pura,limpida, omnis\nlaporis expers, guftu jucundo, clara, pellu- humores liquat, & evacuat: corpus & membra\ncida, tenuis, levisque reperitur: necnon quae clarificat, urinam movet: calorem nativum &\nigni admota cito calefit, remota vero oxyflime, numorem auget: tonnium conciliat: carbem &\nfrigefcit, & in qua carnes & legumina celerrime cum retfituit naturali temperamento: cibum\ncoquuntur:que deniq; aftate frigida, hyeme ve- diftrbuit: mundificat, & abfertgit. Sed ufus ejus\n& fine ulla ventriculi moleftia labitur, & fecedit. petitum dcjicit, naufeam movet, jufturas laxat,\nTalis autem ea effe foler, cujus fons ad orifetem & debilitat, calorem naturalem refolvirengopus\nSole erumpit, curritq; fuper lapides, aut arena, & membra laxat, humores movet, & ulceribus\naut purifimam terram. Omnium tame praeftan- nocet, & c. Galenus, & alii.\ntifima eft pluvialis, eaque praefertim quae in fine\n\nDe balneo aqua dulcis frigido.\n\naftatis, vel principio autumni, vel etiam media\n\nBALNEUM aquae dulcis frigidum valet con-\n\naftatepluit, filente coelo. Huic fereilla refpon-\n\ntra morbos caedos & ficcos, febres omnes fic-\n\ndet, quae eodem tepore cum tonitruis defcendit.\n\ncas, convullfionem, fpafimum, fanguinis profu-\n\nActa, quae maxima aerisac ventorum procell a,\n\nvia quae cunque, cutis fordes, menftruorum flu-\n\nterrifi co tonitruum, fulgurum, & grandinis im-\n\nxum nimium, & rubcum, & cholericum,articu-\n\npetu, ex velociter concitatis nubibus caelo de-\n\nlorum dolores, & podagram. Prodeft juveni-\n\nmittitur, in humanae vitae ufum admitti non de-\n\nbus, & carnofis: totum corpus refrigerat: cutem\n\nbet. Porro aqua cifter narum non aequo comen-\n\ndenfat: digeftionem confortat: vires roborat.\n\ndatur, tum quod mifcell a quaedam fit diverfari\n\nSed frigidum balneum nocet maxime pueris, &\n\naquarum, quae in diverfis anni temporibus inibi\n\ncrefcentibus, gracilibus, mulieribus, fenibus, im-\n\ncolliguntur ex pluvia, ex grandine, & nisibus\n\nbecillis, nervis & junfturis debilibus, peftori,\n\nbymali tempore in teftis colliquatis: tum quod\n\ncordi,ftomacho frigido, & imbecillo, intcftinis,\n\naqua omnes ftationariae, putrefaftioni facile\n\nrenibus, matrici, hominibus frigidis & humidis,\n\nfintobnoxiae. Putealis praeterea aqua tertium in\n\nmorbis omnibus frigidis & humidis: capo rna-\n\nbonitate locum habet: gravis quidc eft, aegreg;\n\ntivo, vulneribus & ulceribus, hefticae: item op-\n\n\npilat, & conflipat. Undem.\n\ntamen tanto minis fuerit damnada, quanto fre-\n\nDe aquis mineralibus five thermis.\n\nquentius hauritur, vel fi e fubterraneo fonte fca-\nturi at. Sequuntur lacuftres & paluftres: quae om- AQUAE mineralesfeu THERMAE, Balnea na-\nnino funt improbandae, nifi coftae, vel igne fue- turalia dicuntur, quae per feautfponte, vel natu-\nrint deftillate. Fluviatilis deniq; probatur, in qua raliter facturiuut: alioque nomine, eo quod illis\nnulla animalia putrefa fta, nulla excrmefta, nul- infit calefacien di facultas, thermae vocatur. Sunt\nla urbium fordes ineffe fentiuuntur, &c. Galenus. autem quaedam falfa, quaedam nitrofa, quaedam\n\naluminofa,queda fulphurea, nonulla bitumino-\n\nDe balneo aqua dulcis calido.\n\nfa, aliqua ferrea, aliqua aerea, aliqua cuptrea, ali-\n\nBALNEUM calidum aquae dulcis confert alo-\n\nqua aurea, quaedam ex plurib. horum mixta, &c.\n\npeciae, appetitui canino, alvo obftruftae, capitis\ndolori,calori externo, cholericis, & morbis cali- De balneis falfis.\ndis, colicae, phthifi, pulmonis vitiis, pleuritidi, BALNEA falfa ad frigidas & humidas intem-\nhefticis, haemorrhoidibus obftruftis, laffitudini peries, & ad ejusdem generis morbos coferunt.\nmembrorum, extenuatis, confump tis, morbis Proinde medentur hydropicis, frigidis nervo-\nficcis, fpleniticis, melancholicis, fittvigiliae, ven rum doloribus, podagrae, refolutioni, afthmati-\ntris fluxui, ulceribus, tertianis, quartanis, fluxi- cis: peftoris fluxiones cohibent: ventriculo fri-",
+        "characters": 4438,
+        "time_seconds": 54.73,
+        "original_characters": 4588,
+        "cleaned_characters": 4438,
+        "filtered": 150
+      },
+      {
+        "page": 18,
+        "file_id": "page_18",
+        "image_file": "0033_p033.jpg",
+        "text": "pituftofis, fcabie infeftis, capiti thoracique flu. — De balneis bituminofis.\nxionibus obnoxio, &c. Valent praeterea contra\n\nBituminosa balnea caput replet, fenfuum\n\nspafimum & convulfionem, matricem frigidam\n\ninfrumenta laedunt, enixè tamen calefaciant, &\n\n& humidam, veficam & nervos, renum aegritu-\n\n\ndines, tefticulorum inflationem, menftrua alba,\n\nfertim uterum, veficam & colum. praeterea aqua\n\nferilitatè, ulcera, tormina, flatus & dolores ven-\n\nintercute affe&is peridonea funt. Galenus.\n\ntris, laxitatem membrorum, calculum, articulo-\n\nDe balneis ferreis.\n\nrum dolores, humorum putrefactionem, nervo-\nrum contritionem, cafum, epilepfiam, aurium\n\nIn frigidant, excicant, ftypficant. Profunt\n\ndolorem, vulvae cafum, splenis duritiam, ftoma- calidis & humidis morbis, aftnmati, podagra, &\nimpetiginem, &c. Galen. & alii. littei, aurium faniei, fluxui ftomachico,hydropi,\n\ncolicae, fluxui menfuum, & urinae, haemorrhoidi-\n\nDe balnei nitrofis. bus, ani egreffioni, venenis, &c. Fiechfus, & alii.\n\nNitrosa balnea a falfis, facultatibus non\n\nDe balneis cupreis, & areis.\n\ndifcruut, nifi quod in omnibus illis valentiores\n\nBALNEA cuprea & area calefaciant, ficcant,\n\nfunt, non adeò tamen adftringunt, fed valenter\n\nabftergunt, quare & fcabiofos mundant, & au- abftergunt, refolyunt, incidunt, ftypficant, incar-\nrium ulceribus medentur, incertosq; earum fo- nant, mundificant, confolidant, confringunt.\nnos atque tumores difcultunt. Conferunt prae- Proinde articulori doloribus, podagricis, afth-\nterea capiti, fibrosi, diafibus, yenfitcho piutro. maticis, nephriticis, ulceribus, malignis, ocu-\nfo, ac humido, hydropi, tumoribus laxis, nervo- lis, ori, tonfillis, & uva auxiliantur: conferunt\nrum vitiis, defluxionibus ad pe&us, pruritui, fur- morbis frigidis & humidis, laxitati, & rupturae\nfuribus, vifui, paralyfi, nervorum torfionibus, membrorum, contufis membris, vulneribus ma-\nfurditati, ventris doloribus, vermibus, carni ex- lè curatis , cutis malis, carbunculo, carni excre-\ncrefcenti, ulceribus, venenis. Galen. & alii. fcenti, vifui, carni fupersuae in naribus, vel ano,\n\nDe balneis aluminofis. hydropi, alvo confiptatae, &c. Fiechfus, & alii.\n\nAluminosa balnea, ad fanguinis reje&io. De balneis aureis.\n\nBALNEA aurea calefacunt, & ficcant. Proin-\n\nnes, ventriculum vomiturientem, haemorrhoi-\n\nde doloribus colicis, volvulo, fiftulis, podagra-\n\n\nac malignis ulceribus fuccurrunt. Profunt item\n\ndinate purgantur, & quae frequenter abortiunt:\n\nventriculo frigido, calculo, rupturis, oculorui vi-\n\n\ntiis, fcabici & lepra, cutis malis, cordi, ejusq; tre-\n\ntur, & tibiarum varices profunt: Exiccant valde,\n\nmori, & affe&ibus, oris fcentori, &c. Fiechf. & alii.\n\ncalefaciant, confolidant, coagulant. Valent ad-\nversus ru&us, hydropem, tormina, ulcera mali- De balneis gypfein.\ngna & putrida, articularè morbum, fputum fan- BALNEAE gypfcea infrigidant, exciccant, con-\nguinis, fidores fupersuos, dyfpepsfiam, varices, glutinat, oppilat. Prosuffluxui fanguinis è narri-\nulcera vefica, tumores laxos, item valent contra bus, ophtalmig, menftruorufluxui, & alis om-\nfluxum fanguinis, & aliarum fupersuitatum, vi- nib. fluxionibus, calidis & humidis morbis, &c.\nfus obfcuritatem, ftomachica, tefticulori dolo- De balneis mixti.\ncem, herpetem, effhionemur, apoflema corrofi- BALNEA quae ex mixtis qualitatib. confiant,\nvum, ignis aduftionem, carnem fupersuam, &\nomnes morbos frigidos & humidos. Gal. & alii. E Pro cujusq; vincentis qualitatis ratione agunt.\n\n\nDe balneis fulmufcis.\n\nminum Germanie notitae thermarum facultates\n\nSulphurEA balnea calefaciant, nervos\n\ndijudicare licebit, modo mixtura ac conftitutio-\n\nemolliunt, dolores mitigant, ftomachum ener-\n\nnè illarum perfpe&a habeamus. Quare ne quid\n\nvant & fubverunt, omnia cutis vitia exteruift.\n\nhac in parte defiderari poflit, breviter earüdem,\n\nhydropiciis, alphis, leucis, impetiginibus, ulceri-\n\npotiffimum earu, quae caeteris antecellere viden-\n\nbus antiquis, articulorum defluxioni, lieni indu-\n\ntur, mixtura & vires exponenda funt. Fiechfus.\n\nrato, jecori, utero, refolutionibus, coxendicibus\n\nDe thermis Germania, & primò de balneis\n\n& fcabiei fubveniunt. Siccant praeterea vehe-\n\nCurienfibus, sive Piperinis.\n\nmenter, & in quarto gradu, refolyunt, aperiunt,\nattrahunt, confumunt, attenuant. Profunt ven- In Curiensi dieceft thermae fita funt, quae\ntriculo, nervis frigidis & humidis, fcabiei, fple- Germanis fpeffersbàd dicuntur: hoc eft, piperina\nni, calculo, tenefmo, jecori, matrici, lumborum balnea. Conftant mixtura auri, fulphuris, ferri,\ndoloribus, morbis frigidis & humidis, refolutis, aeris, & nitri. Harum aqua non continuò manat,\nparalyfcis, contraftis, tremulis, & nervorum do- fed tertio die Maji erumpit, decimo verò quarto\nloribus, tumoribus articulorum, & eorum mor- Septembris iterum fefe fubducit. * Mirifice do-\nbis aliis, epilepticis, lethargicis, furditati, & obli- lorib. capitis confert, memoriam roborat, vifum\nvioni, & coryzae, apoplexie, tuffi, pe&oris faniei, auditumqüe auui: cerebri obftru&iones ac ner-\nafthmati, ventofitatuibus, hydropi, i&eritiae, ve- vorum aufert, articulori doloribus, ulceribus,\nmenatis, &c. lidem. ra&urisq; ollium fuccurrit. Valent praeterea ad",
+        "characters": 5168,
+        "time_seconds": 66.99,
+        "original_characters": 5447,
+        "cleaned_characters": 5168,
+        "filtered": 279
+      },
+      {
+        "page": 19,
+        "file_id": "page_19",
+        "image_file": "0034_p034.jpg",
+        "text": "phthifim, febres inveteratas, apoplexiam, para- tis, contractis, dolentibus, fcabiei, pruritui, im-\nfifim,refolutiones linguae, ac oris, sfapfimum, po- petigini. Nocent contra calidis & ficcis tempe-\ndagram, lateris dolores, cordis palpitationem, ramcntis, & morbis. Fuchfius, & alii.\nictus,percuffiones,ophthalmiam,furditare,ma-\nniam,veterni, chiragra, artuum dolores, mem- De Badenius in Marchionatu Badenis.\nbra fracta, luxata, contracta, convulfa, & fugilla- In inferiori B a d e n i a , ubi Marchio Badenis\nta, ulcera maligna, & male curata, fcabiem, im- refidet, funt balnea mire efficaciae, quorum mix-\npetiginem,elephantia fim,lepram recentem, vul- tura ex sulphure, fale & alumine exiftit. * Cofe-\nnera male curata, calculos renum & veffica, uteri runt difficile fpirantibus, & affhmaticis, dolorib.\naffectus varios, & inveteratos, renum vitia diu- articulorum, & podagra, a frigidis humorib, or-\nturna,veficae mala vetera, cancrum, fistulam,an- tis, hydropicis, uteri morbis frigidis, albis potif-\nthracem, ficos, ficirthos, luxationes vertebrarum, fimum menfibus: conceptione promovent, fte-\ntemperiem, cofumptos a morbo, obstruftiones frigidis & humidis, prae caeteris balneis mirifice\ncerebi, jecoris, lienis, & nervorum, icteritiam, conveniunt: ulceribus & cutis vitiis medentur.\nquartaram, hydropem, &c. Fuchfius, & alii. Profunt praeterea contra defullationes & deflu-\n\nxiones a capite ad pectus, fluxiones aurii, & o-\n\nDe Badenius Lotharingiis, five Plura-\n\nculorum, tinnitum aurium, hydropem, matricis\n\n\nIn Lotharingia montanis balnea funt, podagram, chiragram, ifchiada, tremorem-\nquae plumbers/quafi plumbea, ob nimirum co- brom, torpida membra, fpaftni, articulorum\npiofam plumbim ixturam, vocantur. Conftant dolores, netvoru rigores, humiditates, ftupores\nex plumbi, fulphuris, & aluminis mixtione.* Au- & tremores, ventriculi frigidam & humidam in-\nxilaniur malignis & curatu difficilib.ulceribus, temperie, jecoris & lienis infirmitates frigidas,\ncancro, phagedanis, fistulis, elephantiae recens abortum, uteri, & ani procidetiam, intenfiorum\nceptae, & omnibus cutis vitiis. Valent praeterea dolores, crurum inflationes, fcabiem, impetigi-\ncontra capitis fluxiones, fcabiem, pruritum, im- nem, cutis vitia, pruritum, fquamas, excoriatio-\npetiginem, intertriginem, vulnera male curata, nem, morbum Gallicum, cachexiam, renum do-\nmembra rupta, contufa, & refoluta, torporem lores, urinae difficultatem, colicam, catarrhum,\nmembrorum, artuum dolores, laftitudine mem- omnes frigidos ac humidos morbos hepatis, lie-\nborum, imbecillitatem panariciurn, fluxiones D nis, & ventriculi: profunt item omnibus homi,\npatrum corporis, paralysim, contufionem, in- nibus frigidis & humidis. Udem.\nfrangulatum, renum morbos, vefficae aegritudi- In Badeni oppido Aufriae facturiuutaque\nnes,fluxiones, febres inveteratas, & recetes,me- calidae multum sulphuratae, parum nitrofae, ac\nfes albos, fterilitate, haemorrhoidas obstructas, aluminofae, Antegafae nominatae. Valentautem\n& humidos morbos omnes. Fuchfius, & ali*. ad frigidos, humidos, & pituitofos morbos, tho-\n\nDe Badenius Helvetiorum. racis phlegma, jecoris ficrrhfi, ftomachi, intelfti-\n\nHaud procul a Badeniis Helvetiorum fa- norum & matricis mala, colicam, lumbricos, hy-\nlubrestherma habentur, quaru mixtura conftat dropem, menfes retentos, menfes albos, capitis\nex copiofo fulphure, & exiguo alumine. * Pro- dolorem, veterum, memoriam amiffam verti-\nfunt ad frigidas ac humidas capitis & cerebri ginem, refolutionem nervorum, aurium flatus,\npafliones, lethargum fcilicet, amiffam memoria, & fonitum, furditatem, podagram frigidam, ar-\n& fimiles. Calefac iunt & exiccant ventriculum, ticulorum imbecillitatem, cancru, eryfipelas, uf-\ncjusc; concoctionem juvat, jecoris & lienis ob- cera maligna, & fcrpetia, & erodentia, anirimas,\nftructiones tollunt. Detentos menfes evocant, & ulcera, ruptis & contufis membris. Rutandus.\n& fterilitatem auferut. Mulieribus praeterea ma- De balneis Ferinis in ducatu Vir-\ngis quam viris coferunt: Item pectoris anguftiis\nprofunt, affhmati, dyfuriae, ftomachi affectibus, tenbergenf.\nphlegmaticis, intelfinorum obstruftionibus, co- In ducatu W irtenbergens haud pro-\nlicea paflioni, catarrhis frigidis, coryzae, rheuma- cul a Cjnab oppidulo, (unt thermae, que a Martia-\nti, defluxionibus ex capite, fenfibus roborandis na fylva 2Bttfbbab/hoccft, ferinea nominantur:ex\n& curandis omnibus, vifui, vertigini, oculorum eadem qua priores mixtura coftant. Sunt tamen\nfuffufioni, & fluxioni, auditui, & odoratui, con- qui cupri & nitri mixtionem accedere putent.\ncoftioni malae, cibi faftidio, renum vitiis, calcu- * Vive capitis paflionib. frigidis, paralysi, covul-\nnervorum, mufculorum, tendinum, & ligamen- ta fenfium roborant, tinnitu aurium, jecoris &\ntorum affectibus, vifcerum obstruftionibus, fuf- lienis obstruftiones tollunt, hydropicis & ictero\nfocationi matricis, & praecipitationi, ac emotae e laborantibus, renum & vefficae calculis, ventri-",
+        "characters": 4952,
+        "time_seconds": 65.62,
+        "original_characters": 5265,
+        "cleaned_characters": 4952,
+        "filtered": 313
+      },
+      {
+        "page": 20,
+        "file_id": "page_20",
+        "image_file": "0035_p035.jpg",
+        "text": "omnia,quae Marchionis thermae,poslunt. Viris A joriq; exiiccandi eorum quae in partium cavita-\ntamen magis,quarn mulieribus competit. Sunt tibus delitefcut, facultate praeditae.Proinde pro-\npraetera talubres fluxionib. & humiditati capi- funttremulis,convulfis,cotractis,podagrae,chi-\ntis,oblivioni, pectoris angustiae,asthmati,fputo ragrae, ifchiadi, omnibus obstru&ionibus jeco-\nfanguinis,empyemati,oculoru lippitudini: pro- ris & lienis, hepaticis, spleniticis,ictericis,febri-\nfunt calculis mirifice tam renum, quam velice, bus cholericis, putrefactionibus,omnibus mor-\ntractis, tremulis, vetriculi ardoribus, & slatibus, petentiae, vomitui,ventriculo vitiofo, catarrhis,\nventriculo & inteftinis craflis & pituitofis hu- nephriticis, velice,malis, apoftemati matricis,\nmoribus repletis, laffitudini, fattidio cibi,urinae ejusq; tumori, dolori, & aliis vitiis. Conferunt\nretentioni,ftranguriae, colice, podagrae, fcabici, quoque matrici afcendenti, vel defcendenti,ob-\nulceribus dolorofis, cutis vitiis, & externis cor- ftru&ae,refrigeratae, sferilitati, nervis induratis,\nporis vitiis omnibus. Fuchfius, & alii. refrigeratis, colice, iliace, lumbricis, tormini-\n\nbus,ulcetibus, tumoribus pituitofis,fcabici, pru-\n\nDe balnei Cellensibus.\n\nritui, & cutis vitiis alis, omnibus deniq; morbis\n\nHaud procul a Martiana fylva Cellenses phlegmaticis Fuchfius, & alii.\nfunt thermae, quaru mixtura ex modico sulfphu-\n\nDe balnei Emfenfibus.\n\nre,alumine & cupro conflat. * Succurrunt diu-\n\nIn Finibus lacus Podmici,quem Confan-\n\nturnis febribus ex pituitofis fimul & biliofis hu-\n\ntienfem vocant, thermae habentur, E M B s dictae,\n\nmorib. ortis, ulceribus diuturnis & malignis, ar-\n\naluminis & nitri mixtura participantes. * Con-\n\nticulorum doloribis apnectitae caninae, nec prae-\n\nferunt doloribus capitis, nervorum refolutioni-\n\nteris thermis conveniunt calidis & ficcis tempe-\n\nbus a coli doloribus factis, & ulcerib. malignis.\n\nramentis. Valent contra calculos, dysenteriam,\n\nValent praeterea cotra hepatis & renum, ventri-\n\nfluxusq; alios ventris, marafimum, pectoris an-\n\nculiq; fervorem, nervoru, & articulorum dolo-\n\ngustiam, pleuritidem, peripneumoniam,tuflim\n\nrem, & duritiem, menfes inordinatos, sferilitate,\n\nficcam, & asperam, urinae ardores, defluxiones,\n\nabortu,fcabiem, & cutis vitia. Porro non procul\n\nbilem utranque,maniam, melancholiam,icteru,\n\na Lanftein oppido ultra Rhenu profluunt aquae\n\nquartanam, hydropem,vomitum,ventriculini-\n\ncalidae, Ems appellatae: conflant autem ex ful-\n\ntemperiem frigidam & humidam, ejusq; humo-\n\nphure,alumine,chalcantho, & nitroq uae faciut\n\n\ncontra fensuum defectus,asthma, humores crat-\n\nnes, arthritim, narium fanguinis fluxum, menfes\n\nfos, pituitofos ac tenaces, sptradidifficultatem,\n\n\ncolicam,ani rhagadias, rimasve:valent praeterea\n\ncholerica mala, vulnera incurabilia, laffitudi-\n\ncontra rimas pudendi muliebris,ventriculi sla-\n\nnem, & cutis vitia. lidem.\n\ntus, & fluxiones, refoluta mebra,renum lapides,\n\nDe balnei Geppingenfibus.\n\nmatricis mala frigida, sferilitatem,ulcera vetu-\n\nIn W irtenbergerensi ducatu ad Gep- fta. Profunt quoque abfceflibus frigidis, poda-\npingam oppidum thermae funt,quae Germanice grae, arthriticis, fluxui ventris,impotentiae natu-\nGaurbrunn/ hoccef, acidus fons appellantur. Ex rali,infixis corpori,fcabici, pulmonis vitiis,ner-\nacidis, quibus exigua sulphuris acceflit portio, vorum contractioni, & cutis vitiis, &c. lidem.\nharum mixtura conflat. * Profunt partibus cor-\n\nDe balnei Gebersvilenfibus.\n\nporis luxatis, ideoq; vetriculumacjecur potifli-\nmum corroborant. Hydropicis & regio morbo E In A l s a t i a prope Geberswvitter thermae\ncorreptis,humoribus putrefactis,volvuloq; opi- funt,quae ex mixtura aluminis, nitri & ferri con-\ntulantur. Lumbricos quoq; fi bibantur, encant. fant. * Opitulantur lienofis, quartana laborant.\nProfunt praeterea contra omnes obstru&iones tibus,ulceribus sordidis, & omnibus vitiis cutis.\nhepatis, splenis ardores, teftium inflamations culi imbecillitatem, menfes albos, capitis mala,\n& tumores, febres tertianas,iliacam,fluxus ven- lepram recentem, morphaem, verrucas, herpe-\ntris,menftruorum fluxum superfluu, colicam bi tem.tudlim antiquam,impetiginem,ferpiginem,\nlio fam, inappetentiam, lumbricos,ulcera,fcabie, puftulas parvas, nodos, cancrum, & fcabiem.\npruritum, ipurandi difficultatem, pectoris com- Fuchfius, & alii.\npreflionem, fitim, fanguinis fluxum ex naribus, F\naliisq; locis, ventriculi imbecillitate,omnes mor- De balnei Carolini, sive Ellenbo-\nbos cholericos, omnes morbos, tam internos genfibus.\nquam externos, ortos ex putrefactione: femen\n\nApud Ellenbogium in Bollemiaop-\n\naugent, & Venerem flmulant. Fuchfius, & alii.\n\npidum thermae, fuiphuris & aluminis mixturam\n\nDe balnei Avvenfibus.\n\nobtinent. Curant glandulas, ftrumas, genuum\n\nTh erm a e,quae in Av funt,prope Rotenburg. tumores, paronychias, coxarum dolores, un-\ngum ad Nicerum ftrum, fimilem cum modo di- guium feiffuras, paralytica & contrafta mebra,\ntis mixturam obtinet: copiofiore tame fulphu- capitis dolorem frigidum & humidum, lethar-\nris portione conflant, ideoqueminus prioribus gum, carum,memoriae corruptionem,dolorem\nacidae:quo etia nomine calidiores exiftunt, ma- ipinae,vertiginem,renum & velice calculos,ftu-",
+        "characters": 5222,
+        "time_seconds": 63.39,
+        "original_characters": 5498,
+        "cleaned_characters": 5222,
+        "filtered": 276
+      }
+    ],
+    "total_pages": 20,
+    "successful": 20,
+    "failed": 0,
+    "is_sample": true,
+    "sample_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  }
+}
