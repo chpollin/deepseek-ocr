@@ -323,46 +323,67 @@
         "page": 1,
         "file_id": "page_1",
         "image_file": "signal-2025-10-29-073743.jpeg",
+        "text": "**Classifica d'Archivio** **0 7 9 5 3**\n\n**attentità** **materi** **di nascita** **ATTIVITA' ECONOMICA E PROPRIETA'**\n\n**di nascita** **di residenza** **di residenza** **di residenza**\n\n**comune** **comune**\n\n**comune**\n\n**comune**\n\n**comune**\n\n**comune**\n\n**comune**\n\n\n**OMPONENTI** Età Qualifica Note\n\noglie\nfiglio\n\n**PASSAPORTO N.Q T E**\n\n**PASSAPORTO N.Q T E**\n\n**PASSAPORTO N.QT E**\n\n**PASSAPORTO N.Q T E**\n\n**PASSAPORTO** **N.Q T E**\n\n**PASSAPORTO N.Q T E**\n\n**PASSAPORT** **N.Q T E**\n\n**PASSAPORT** **N.Q T E**\n\n**PASS** **PASSAPORT** **N.Q T E**\n\n**PASSAPORT** **N Q T E**\n\n**PASSAPORT** **N Q T E**\n\n**PASSAPORTO** **N.Q T E**\n\n**PASS** **PASSAPORT** **N Q T E**\n\n**PASSAPORT** **N.Q T E**\n\n**PASSAPORTO** **N.Q T E**\n\n**PAS** **PASSAPORT** **N.Q T E**\n\n**PASSAPORT** N.Q T E\n\n**PASSAPORT** N.Q T E\n\n**PASSAPORT** N.QT E\n\n**PASSAPORT** N.Q T E\n\n**PASSAPORT** **N.Q T E**\n\n**PASSAPORT** **PASSAPORT** **N.Q T E**\n\n**PASSAPORT** P ASSAPORT **N.Q T E**\n\n**PASSAPORT** **PASSAPORT** **PASSAPORT** **N.Q T E**\n\n**PAS** **PASSAPORT** **PASSAPORT** **PASSAPORT** **PASSAPORT**",
         "characters": 1078,
         "time_seconds": 15.2,
-        "note": "Italian card - Repetition bug (PASSAPORTO repeated)"
+        "original_characters": 1078,
+        "cleaned_characters": 1078,
+        "filtered": 0
       },
       {
         "page": 2,
         "file_id": "page_2",
         "image_file": "signal-2025-10-29-073743_002.jpeg",
+        "text": "A.E.F.ASSEMBLY CENTER REGISTRATION CARD\n\nG10814121169Hartvias\n\nL.(Registration number)\n\n2.(Family name)\n\nOncas\n\n(Other given names)\n\nLithuanian\n\nM.\n\nF.\n\n23.3.93.4.Date\n\n3.(Claimed nationality)\n\n4.(Sex)\n\n5.(Age)\n\n(Arrival)\n\n(Departure)\n\nF.(Assigned birth number or address)\n\n8.DESTINATION OR RECEPTION CENTER\n\n4.S.A\n\n23.3.49\n\n(Names or number)\n\n(City or village)\n\n(Province)\n\n9.REMARKS\n\nOCS-12730\n\n19.7y. Kothenung\n\nGion 13\n\nRECORDS DESTROYED ON 20.2.37\n\n10-20724-1\n\n(Use reverse side for additional remarks)\n\nD.P.3",
         "characters": 514,
-        "time_seconds": 6.11
+        "time_seconds": 6.11,
+        "original_characters": 514,
+        "cleaned_characters": 514,
+        "filtered": 0
       },
       {
         "page": 3,
         "file_id": "page_3",
         "image_file": "signal-2025-10-29-073743_003.jpeg",
+        "text": "A/FR\n\nREFUGEE/DISPLACED PERSON STATISTICALCARD\n\n1.Surname\n\n327428\n\n10.Country of Citizenship or Ethnic\n\n2.Christian Names\n\nHala\n\nEligible for care and\n\nEligibility Offcer\n\n901IRO Area Office\n\n11.Country of Last Habitual Residence\n\nGermany\n\n3.Sex Male Female\n\nDate\n\n8.Reason for evic-\n\ntion or leaving\n\nCamp\n\n12.Religion\n\n4.D.P.Identity Card No\n\nEmigrated to:USA\n\nOrth\n\n\n25MAR1951\n\n13.Place and Date of Birth\n\n- Germany\n\n4/15 836\n\n2MAR1951\n\n1-1-48.\n\n5.Family Status.Eamily Head Family\n\nmember Unaccompanied under 17\n\nUnattached 17 and over (if Family\n\nmember give name of Family Head)\n\nDemeden ko Wasy1.\n\n9.Date of Origin of\n\nCard\n\n14.Present Location.D.P.Camp/\n\n\n(If in D.P.Camp state Assembly No.)\n\n6.If Family Head. state number in\n\nFamily\n\nDate of Origin of\n\nCard\n\n15.If in Hospital.Home.Foster Home\n\nor Centre other than a D.P.Camp\n\nstate place name.",
         "characters": 854,
-        "time_seconds": 8.58
+        "time_seconds": 8.58,
+        "original_characters": 888,
+        "cleaned_characters": 854,
+        "filtered": 34
       },
       {
         "page": 4,
         "file_id": "page_4",
         "image_file": "signal-2025-10-29-073743_004.jpeg",
+        "text": "Ankare, den 30. April 1947\n\n21. 35/Pol\n\nGespräch mit dem ital.\nBotschafter\n\nHerr Bundesminister!",
         "characters": 96,
         "time_seconds": 2.04,
-        "note": "German Ankara letter - Partially illegible"
+        "original_characters": 96,
+        "cleaned_characters": 96,
+        "filtered": 0
       },
       {
         "page": 5,
         "file_id": "page_5",
         "image_file": "signal-2025-10-29-073743_005.jpeg",
+        "text": "**Zahl** **449/A/47**\n\n**Johann** **Schöber** **aus** **Taufers**\n\n**Entlassung** **aus** **der** **Kriegsgefangenschaft.**\n\n**An** **das**\n\n**Bundeskanzleramt** **Auswartige** **Angelegenheiten.**\n\n**Wien**\n\n**In** **einem** **Schr.** **16n** **mehren** **oetterreichischer** **Kriegsge-**\n\n**fangerer** **an** **den** **Herrn** **Bunde** **kanzler,** **das** **mir** **übermittelt** **wurde,**\n\n**kommt** **auch** **ein** **gewisser** **Johann** **Schöger** **vor,** **der** **aus** **Suedtirol**\n\n**Taufers** **stammt.** **Es** **ergibt** **sich** **die** **Frage,** **ob** **dieser** **als** **Oester-**\n\n**reicher** **reklamiert** **werden** **kann.** **Nach** **dem** **Kabinettratsbeschluss**\n\n**vom** **29.8.** **und** **10.10.45** **waare** **er** **als** **Umzidler** **gleich** **einem**\n\n**Oesterreicher** **zu** **behandeln.** **Es** **ergibt** **sich** **nur** **die** **Frage,** **ob** **die-**\n\n**ser** **Kabinetsratsebeschluss** **der** **provisorischen** **Staatsregierung** **auch**",
         "characters": 791,
         "time_seconds": 11.71,
-        "note": "German letter - All text formatted as bold"
+        "original_characters": 1001,
+        "cleaned_characters": 791,
+        "filtered": 210
       },
       {
         "page": 6,
         "file_id": "page_6",
         "image_file": "signal-2025-10-29-073743_006.jpeg",
+        "text": "For coding purposes\n\n(1) Registration No\n\n109.9887\n\nA.23585\n\nG641014501\n\nPAGE\n\nOriginal\n\nDuplicate\n\nM.\n\nSingle\n\nMarried\n\nPac\n\nBanner\n\nF.\n\nWidowed\n\nDivorced\n\nFamily Name\n\nOther Given Names\n\nSex\n\nMarital Status\n\nClaimed Nationality\n\n3.607\n\nBorpalk\n\nEsthan\n\nLuth.\n\n(5) Number of Accom-\n\npanying Family\n\n(6) Birthdate\n\nBirthplace\n\nProvince\n\nCountry\n\n(7) Religion (Optional)\n\nMembers:\n\n(10) Full Name of Father\n\n(11) Full Malden Name of Mother\n\n(12) Desired Destination\n\n(14) Usual Trade, Occupation or Profession\n\n(13) Preferred Place of Residence January 1,1938.\n\nCity or Village\n\nProvince\n\nCountry\n\nSea-Wale\n\nCity or Village\n\nProvince\n\nCountry\n\n(16) Other Trades or Occupations\n\n(17) Languages Spoken in Order of Fluency\n\n(18) Do You Claim\n\nto be a Pris-\n\noner of War\n\nX\n\n000.-R.\n\n(20) Signature\n\n(21) Signature\n\nDate:2.245\n\nAssembly\n\nCenter No.\n\n525\n\n(22) Destination or\n\nReception Center:\n\nName or Number\n\nCity or Village\n\nProvince\n\nCountry\n\n(23)Code\n\n1\n\n2\n\n3\n\n4\n\n5\n\n6\n\n7\n\n8\n\n9\n\n10\n\n11\n\n12\n\n13\n\n14\n\n15\n\n16\n\n17\n\n18\n\n19\n\n20\n\n21\n\n22\n\n23\n\n24\n\n25\n\n26\n\n27\n\n28\n\nfor Issue\n\n205 PPP (24) Remarks\n\nKarel Pac -husband. 4.0109935\n\nWhen to return lost at 200 in the Indepand\n\nMemorandum Registration Republic of U\n\nfrom 1919 till 1934 is restored again DP-2",
         "characters": 1016,
-        "time_seconds": 11.89
+        "time_seconds": 11.89,
+        "original_characters": 1224,
+        "cleaned_characters": 1016,
+        "filtered": 208
       }
     ],
     "total_pages": 6,
