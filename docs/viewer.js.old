@@ -1,0 +1,476 @@
+const DOCUMENTS = {
+  "o_szd.151": {
+    "mets_metadata": {
+      "title": "Abwesenheitsnotiz II, SZ-SAM/L18",
+      "signature": "SZ-SAM/L18",
+      "author": "Zweig, Stefan",
+      "language": "de",
+      "owner": "Literaturarchiv Salzburg, https://stefanzweig.digital, CC-BY",
+      "urn": "info:fedora/o:szd.151"
+    },
+    "logical_structure": [
+      {
+        "id": "U.1",
+        "type": "Abwesenheitsnotiz II"
+      },
+      {
+        "id": "U.2",
+        "type": "Farbreferenz/Schluss"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "file_id": "IMG.1",
+        "image_file": "IMG_1.jpg",
+        "text": "Ihr freundliches Schreiben erreicht mich leider in einer Zeit,\n\nda mir aus persönlichen Gründen eine wirklich eingehende\n\nBeantwortung nicht möglich wird.\n\nWollen Sie dies mit Nachsicht zugute halten\n\nIhren ergebenen",
+        "characters": 216,
+        "time_seconds": 4.26,
+        "original_characters": 216,
+        "cleaned_characters": 216,
+        "filtered": 0
+      },
+      {
+        "page": 2,
+        "file_id": "IMG.2",
+        "image_file": "IMG_2.jpg",
+        "text": "[EMPTY PAGE - FILTERED]",
+        "characters": 8019,
+        "time_seconds": 95.28,
+        "original_characters": 8019,
+        "cleaned_characters": 23,
+        "filtered": 7996
+      },
+      {
+        "page": 3,
+        "file_id": "IMG.3",
+        "image_file": "IMG_3.jpg",
+        "text": "Ihr freundliches Schreiben erreicht mich leider in einer Zeit,\n\nda mir aus personlichen GroBen eine wirklich eingebende\n\nBeantwortung nicht moglich wird.\n\nWollen Sie die mit Nachsicht zugute halten\n\nIhrem ergebenen",
+        "characters": 411,
+        "time_seconds": 7.85,
+        "original_characters": 411,
+        "cleaned_characters": 214,
+        "filtered": 197
+      }
+    ],
+    "total_pages": 3,
+    "successful": 3,
+    "failed": 0,
+    "is_sample": true,
+    "sample_indices": [
+      0,
+      1,
+      2
+    ]
+  },
+  "o_szd.196": {
+    "mets_metadata": {
+      "title": "Rede über Stefan Zweig [II], SZ-AP2/L-S5.2",
+      "signature": "SZ-AP2/L",
+      "author": "Zweig, Stefan",
+      "language": "fr",
+      "owner": "Literaturarchiv Salzburg, https://stefanzweig.digital, CC-BY",
+      "urn": "info:fedora/o:szd.196"
+    },
+    "logical_structure": [
+      {
+        "id": "U.1",
+        "type": "Textseiten"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "file_id": "IMG.1",
+        "image_file": "IMG_1.jpg",
+        "text": "COPIA. _En_ _Club_ _Buenos_ _Aires_ _1936._\n\nMonsieur Stefan Zweig,\n\nCette passion extraordinaire que vous avez pour\n\nles voyages, à la recherche des nouveaux pays, en renouvelant\n\nvotre contact avec l'âme des gents divers que vous cherchez à\n\nconnaître, c'est cela qui vous a poussé encore maintenant vers\n\nle continent sud-américain.\n\nCette volonté de parcourir le monde et de jouir\n\nde bien près l'âme de tous les peuples, constitue un des cara-\n\ncteristiques de votre génie. Votre art trouve en cela, peut-\n\nêtre l'élément primordial. Voyageur sans fatigue, vous ne vous\n\nétonnez ni de la distance, ni du temps. Vos yeux resplendis-\n\nsants d'une hardiesse confiante, pénètrent aussi les mystères\n\n\nuniquement les fauves. Ils cherchent à pénétrer la comédie qui\n\nse déroule dans les gratte-ciel des modernes Babylones ainsi que\n\nles drames déchainés dans la solitude inhospitalière du tropi-\n\nque, où votre AMOK a vécu et souffert. Vos regards traversent\n\nles points obscurs des diverses époques. Ils contemplent ce\n\nqui se passe aujourd'hui à vos côtés, ce qui se passait hier,\n\nainsi que les événements d'il y a un siècle. Ils se fixent,par\n\nexemple, sur les faits d'une heure qui a été pleine de prodiges,\n\nquand ERASME crea l'Humainisme et LUTHERE traça une nouvelle rou-\n\n\ntuel de la Reforme.\n\nEn réalité le goût pour les voyages a été votre\n\npassion la plus constante. Enfant et adolescent, vous quittez\n\nle foyer pour aller seul ou en compagnie de votre père, contem-\n\npler les divers paysages du monde. Combien de choses suggesti-\n\nves vous avez rencontrées. La Provence et l'Espagne vous sou-\n\nrirent. Les Etats-Unis, Cuba et le Mexique vous accueillirent.",
+        "characters": 1805,
+        "time_seconds": 19.98,
+        "original_characters": 1805,
+        "cleaned_characters": 1668,
+        "filtered": 137
+      },
+      {
+        "page": 2,
+        "file_id": "IMG.2",
+        "image_file": "IMG_2.jpg",
+        "text": "COPIA.\n    L'Inde, le Ceylan, la Chine, l'Egypte vous ont donné satisfaction\n    de secrets, régions propices aux légendes, villes opulentes et\n    désertes - tout cela assiste au passage du voyageur tranquille.\n    Tout cela a vu traverser celui qui toujours conserva dans son\n    coeur un grand désir de sympathie pour ces mêmes choses.\n    Dans ces voyages, combien de fois vous avez ren-\n    contré des êtres qui avaient l'âme semblable à la votre, avec\n    une pensée et une sensibilité capables de vibrer en union avec\n    vous! A Florence vous avez rencontré ELLEN KEY, et de l'ami-\n    tié que vous lui avez consacrée resta une preuve bien signifi-\n    cative dans la dédicace même qui se trouve dans un de vos livres.\n    A Paris, où vous habitez pendant une année, vous avez gagné\n    l'amitié de JULES ROMAIN, VILDRAC et DUHAMEL. Pendant l'un de\n    vos voyages - vous vous trouviez alors en Belgique, où vous êtes\n    allé en visite à votre grand ami VERHAEREN - un douloureux évé-\n    nement vous a surpris. C'était la plus absurde des nouvelles\n    qui venait assombrir votre esprit de citoyen de toutes les pa-\n    tries: la grande guerre européenne venait d'éclater!\n    Votre pays avait besoin de tous les citoyens va-\n    lides. Vous, Monsieur Stephan Zweig, vous qui aimez conscien-\n    cieusement la paix et qui l'aimiez au dessus de toutes les cho-\n    ses, vous deviez être mollisé. Pendant trois années, vous avez\n    été sous les armes. Heureusement la destinée vous a été propi-\n    ce, puisqu'elle vous a permis de ne pas éprouver le maximum de\n    l'humiliation d'aller jusqu'au champ de bataille. Enfin vous\n    avez obtenu un permis pendant deux mois. Vous êtes parti pour\n    la Suisse. En arrivant vous avez rencontré ROMAN ROLLANT,\n    l'héros solitaire, le plus grand de tous les héros de la calami-\n    nité et protestait sans repos contre la monstrueuse et meurtrière\n    ambition des gouvernants des peuples. Avec ROMAIN ROLLAND et",
+        "characters": 2186,
+        "time_seconds": 19.66,
+        "original_characters": 2186,
+        "cleaned_characters": 1967,
+        "filtered": 219
+      },
+      {
+        "page": 3,
+        "file_id": "IMG.3",
+        "image_file": "IMG_3.jpg",
+        "text": "COPIA.\n    quelques autres écrivains refugiés en Suisse, vous avez créé ce\n    vos propres paroles - quelques écrivains européens, assis à la\n    même table, pendant que tout près de nous cent et vingt millions\n    Vous avez été un des infatigables défenseurs de\n    l'union intellectuelle de l'Europe et de la grande amitié par\n    l'esprit, qui se moque de nos frontières.\n    l'esprit suffisait pour marquer une des plus hautes qualités de\n    votre génie, c'est à dire, celle de son universalité.\n    Monsieur Stefan Zweig, vous êtes un citoyen de\n    l'Univers.\n    Vous etiez encore un adolescent quand vous avez\n    traduit dans votre langue les poèmes de VERLAINE, BAUDELAIRE,\n    SEMAIN et Marceline DESORDES-VALMORE. A cette époque vous\n    faisiez déjà la divulgation de l'oeuvre à tentacules d'EMILE\n    essais et critiques.\n    tous les pays. La froide Russie vous a surpris à côté de ses\n    deux géants magnifiques, TOLSTOI et DOSTOIEWSKI. La flegma-\n    tique Angleterre vous a rencontré en promenade avec DICKENS.\n    L'Allemagne, tourmentée par les aspects nebuleux de sa philoso-\n    phie, vous a vu donnant le bras à NIETSCZHE et à KLEIST. L'Ita-\n    lie, ce pays de séduction et de volupté, vous a suivi pendant vo-\n    tre tour avec l'enigmatique CASANOVA. La Hollande vous a eu\n    assis à la table d'ERASMUS. La France aussi vous trouva assis à\n    la table de STENDHAL.\n    Votre curiosité ne se trouve jamais satisfaite!\n    qu'un qui se décide à traverser le monde, non seulement pour",
+        "characters": 1965,
+        "time_seconds": 17.87,
+        "original_characters": 1965,
+        "cleaned_characters": 1511,
+        "filtered": 454
+      },
+      {
+        "page": 4,
+        "file_id": "IMG.4",
+        "image_file": "IMG_4.jpg",
+        "text": "COPIA.\n    s'amuser en observant les paysages ou restant dans une simple\n    contemplation des multiples inexpressives.\n    Bien au contraire, vous êtes un infatigable visi-\n    teur des bibliothèques et des archives. A' votre argutie,plu-\n    sieurs fois exercée pendant ces visites aux archives et biblio-\n    thèques, la culture européenne doit la révélation de precieux\n    documents. A' l'aide de ces documents vous avez esquissé plu-\n    sieurs admirables biographies. Dans quelques-unes vous arri-\n    vez même à réformer entièrement l'idée qu'un faisait de certains\n    exemple, dans l'étude sur MESMER - de vous voir proceder à une\n    vraie revision des tableaux de l'histoire officielle.\n    Cependant votre curiosité ne serait presque rien\n    si elle n'était pas suivie d'autres qualités spirituelles encore\n    plus utiles.\n    Il me semble que ces qualités sont surtout: en\n    premier, l'amour pour les individualités mystérieuses et le plai-\n    sir de lutter avec les soinins, dechiffrant leurs secrets; en se-\n    cond, l'enthousiasme pour les grandes natures qui sont propices\n    à l'impétuosité et à l'action; en troisième, l'infinie miseri-\n    corde pour tous ceux qui sont atteints avec injustice par le des-\n    tin.\n    Monsieur Stefan Zweig, ma capacité pour analyser\n    les esprits n'est pas trop grande. Mais, autant qu'il m'est\n    permis de voir, je pense qu'il n'y a pas d'erreur dans le clas-\n    sement que je viens de faire sur les principaux éléments de vo-\n    tre esprit. Il y a encore à ajouter à ces diverses facultés,\n    le grand sens de la poésie que vous révélez dans tout ce que\n    vous écrivez. Peut-être il n'y aurait pas besoin de parler\n    nettement de votre poésie. Ne serait-ce pas de la poésie\n    l'amour du mystère dans les âmes? Ne serait-ce pas de la poé-\n    sie la force de l'enthousiasme? Ne serait-ce pas de la poésie\n    le sentiment de miséricorde pour les faibles, les opprimés et",
+        "characters": 2024,
+        "time_seconds": 17.17,
+        "original_characters": 2024,
+        "cleaned_characters": 1947,
+        "filtered": 77
+      },
+      {
+        "page": 5,
+        "file_id": "IMG.5",
+        "image_file": "IMG_5.jpg",
+        "text": "COPIA.\n    a appellé ROMAIN ROLLAND. - Le magistral créateur de Jean Chris-\n    tophe a trouvé une formule parfaite pour définir votre indivi-\n    dualité littéraire. ROMAIN ROLLAND nous dit que vous êtes ce-\n    lui pour qui la vie est la substance de l'art.\n    Votre oeuvre, d'auteur de nouvelles reproduit la\n    grande miséricorde pour les opprimés, pour les fragiles, pour\n    ceux qui n'ont pas été compris, de personne, ceux qui appartiennent\n    à tous les genres de souffrances. Les deux extremes de la vie\n    méritent votre pitié. Vous aimez les enfants et à cause de cet\n    amour vous cherchez à les comprendre.\n    Votre ami FRIED a dévoilé à vos yeux le monde de\n    personne les drames qui devastent ces âmes. Vous les montrez\n    dans la plénitude de son impetuosité et de son ardeur. Avec\n    vous nous apprenons à connaître le petit Edgar. Il a à peine\n    douze ans, mais il possède déjà dans son coeur un sentiment de\n    jalousie pareil à celui de l'Othello. Pendant la nuit, dans le\n    jardin de l'hôtel eclaire par la pleine lune, il suit l'ombre\n    de sa mère et celle du baron qui est en train de lui faire la\n    cour. Profitant de l'observité du corridor il donne des coup\n    de poing à celui qui ménace de lui enlever une sainte affection.\n    C'est avec vous que nous apprenons à connaître Bob, le petit gar-\n    çon rêveur qui dans le silence du parc du château, qui lui est\n    favorable, cherche chaque nuit l'amour de la petite fille incon-\n    nue de ses rêves.\n    Vous aimez aussi les vieillards. Au moins vous\n    témoignez pour eux la même tendresse qui vous avez pour les en-\n    fants. Sous l'inspiration de l'agonie douloureuse d'un vieil-\n    lard, vous avez écrit cette page pleine de pitié: - La des-\n    tention d'un coeur.\n    Si l'enfance et la vieillesse vous ont reveillé\n    tels sentiments, toutes les misères humaines vous inspirent",
+        "characters": 2033,
+        "time_seconds": 15.94,
+        "original_characters": 2033,
+        "cleaned_characters": 1889,
+        "filtered": 144
+      },
+      {
+        "page": 6,
+        "file_id": "IMG.6",
+        "image_file": "IMG_6.jpg",
+        "text": "COPIA. -6-\n    charité et sympathie. Dans les vingt quatre heures de la vie\n    sé dominer à jusqu'au bût par le vice du jeu. Dans la Confu-\n    sion des Sentiments vous avez fixé un intéressant détour psycho-\n    philosophique.\n    Que faut-il-dire de ces personnages que vous dé-\n    crivez, quelquefois avec une plume si légère, en donnant l'idée\n    que vous voulez à peine les esquisser, mais qui pourtant reste-\n    ront éternellement dans la mémoire de tous ceux qui les ont vu\n    dans vos livres ?\n    Voilà Descencia Finkenhuber, la malheureuse Le-\n    porela, la pauvre domestique du jeune baron de F. Fidèle jus-\n    Et sous tous les aspects elle reste mystérieuse, incompréhensi-\n    ble et absurde.\n    Plus loin vous voyons venir l'infortuné Herbert,\n    le vieillard aveugle. C'est un collectionneur de raretés qui a\n    reuni un tresor pendant la longue durée de sa vie. Survint la\n    crise de l'inflation en l'Allemagne. Ayant besoin d'argent,\n    la famille de l'aveugle a vendu peu à peu tous les objets qui\n    constituaient cette collection reunié avec un si grand sacrifi-\n    ce. Dans l'ignorance de la réalité, le vieux dépouillé prends\n    encore entre ses doigts du tremblent, des ridicules morceaux\n    de papier, sans aucun valeur, mais croyant caresser les délici-\n    euses gravures de Durer et de Rembrandt.\n    Un peu plus loin, nous apparait le pathétique per-\n    sonnage qui est Jacob Menzel. C'est un extraordinaire connais-\n    un phenomène unique de mémoire, un dictionnaire, un catalogue\n    universel sur deux jambes. Ce pauvre diable se trouve persecuté\n    pendant la guerre, parce que ayant resté absorbé uniquement avec\n    l'idée de ses livres, il lagnorait que l'Autrich était en lutte\n    contre l'Angleterre et la Russie. Il osa même une fois décla-",
+        "characters": 2015,
+        "time_seconds": 16.11,
+        "original_characters": 2015,
+        "cleaned_characters": 1799,
+        "filtered": 216
+      },
+      {
+        "page": 7,
+        "file_id": "IMG.7",
+        "image_file": "IMG_7.jpg",
+        "text": "COPIA.\n    déclarer aux autorités austriehennes qu'il était un citoyen\n    russe. Dans son imagination il n'a jamais pensé qu'il aurait\n    dû interrompre sa correspondance avec les bibliophiles anglais\n    et français.\n    Après nous identifions un pick-pochet. Curieux\n    personnage, à côté duquel vous êtes resté une journée entière\n    à Paris, en solidarité avec son art si dangereuse... pour écha-\n    per à la fin de devenir vous même la victime de la souplesse des\n    doigts du valeur.\n    Enfin - personnage entre tous, humain et doulou-\n    reux dans votre galerie! - nous trouvons le miséreux de la Peti-\n    te rue au clair de lune. Il est si misérable que vous ne lui\n    avez même pas donné un nom... peut-être pour mieux faire resser-\n    -Vous souvenez-vous bien de ce petit chef d'oeuvre?\n    Le hasard vous avait conduit jusqu'à un port français de second\n    d'ordre et vous veniez de manquer le train que devait vous con-\n    sez pas dans votre hotel, vous êtes sorti pour vous promener en\n    ville. Vous vous proméniez de rue en rue, cherchant à faire le\n    bruit des quartiers populaux. Vous étiez sûrement près du port,\n    dans le quartier des matelôts. Vous êtes arrivé devant une mai-\n    son dont les murs étaient couverts d'inscriptions et d'affiches.\n    en allemand un air de Freischutz. Attivé par cette voix, vous\n    alliez pénétrer dans la maison, quand il est surgi devant vous,\n    vous avez pris place à une table et vous avez demandé une bière.\n    de rire. Vous avez reconnu que cet éclat de rire allait vers\n    parla ainsi:",
+        "characters": 2036,
+        "time_seconds": 18.31,
+        "original_characters": 2036,
+        "cleaned_characters": 1568,
+        "filtered": 468
+      },
+      {
+        "page": 8,
+        "file_id": "IMG.8",
+        "image_file": "IMG_8.jpg",
+        "text": "-  8 -\n\nCOPIA.\n\n-  C'est toi encore? Tu viens te trainer autour de\n\nla maison, vieux vouleur? Allons! Je te permets d'entrer! Je ne\n\nfarai rien contre toi!\n\n\nmobile, en roulant son chapeau entre les mains, sans savoir quoi\n\n\nboire du champagne. Ce fut alors que vous avez pu l'observer à\n\nla clarté d'une lampe. O'tait une figure ravagée, pâle, cireuse,\n\nc'etaient des cheveux rares sur un crâne étrange: - c'était une\n\n\n\nme crapuleuse. Enfin, fatigué de voir tant deturpitude, vous\n\nêtes sorti vers l'air libre! Sous pretexte de vous montrer le\n\n\nalors, dans la solitude de la nuit, il vous raconta sa vie doulou\n\nreuse:\n\n\nIl ya cinq ans ... il y a quatre ans ... à Geratzheim, dans le\n\nHesse, où se trouve ma famille ... Je ne veux paz, Monsieur, qui\n\nvous pensiez mal d'elle ... c'est à moi la faute si elle se trou-\n\n\nça ... J'ai l'ai tourmente ... je l'ai voulue pour moi malgré\n\nsa pauvreté ... elle n'avais même pas de linge ... rien ... abso-\n\nlument rien ... et je suivais riche ... c'est à dire, j'ai de quoi\n\nvivre ... ce n'est pas exactement de la richesse ... du moins\n\nj'ai déjà eu de l'argent dans le passé ... J'étais peut être,\n\nelle a raison, économie ... mais cela était anciennement, Monsieur,\n\navant le malheur ... et je maudit mon economie. Mais mon père\n\n\nm'a couté un dur effort ... Quant à elle, était un peut inconsé-\n\nquente, malgré sa pauvreté elle aimait les belles choses ... Je\n\nl'ai toujours reprimande à cause de cela ... Je ne le devais\n\npas avois fait, maintenant je le sois, Monsieur, pourquoi elle",
+        "characters": 2018,
+        "time_seconds": 18.41,
+        "original_characters": 2018,
+        "cleaned_characters": 1534,
+        "filtered": 484
+      },
+      {
+        "page": 9,
+        "file_id": "IMG.9",
+        "image_file": "IMG_9.jpg",
+        "text": "-  9 -\n\nCOPIA.\n\nest si orgueilleuse, et même très orgueilleuse ... Il ne faut\n\npas croire qui elle soit ce que'elle en a l'air ...... C'est\n\nun mensonge et elle se fait tant de tort à elle même ... Simple-\n\nment ... tout simplement pour me faire du mal, pour me torturer...\n\net ... parce que ... parce qu'elle a honte ... Peut être est-elle\n\ndevenue méchante ... mais je ne le crois pas ... Parce que,\n\nMonsieur, elle était bonne, très bonne ...\"\n\nEt votre malheureux compagnon d'occasion vous ra-\n\nconte l'histoire de son infortune sans fin. Il vivait avec son\n\népouse - elle aimant toujours les belles choses; lui, toujours\n\nabsorbé par ses petites économies. Un jour, exaspérée par cette\n\néconomie de sous, elle s'enfuit de la maison, en laissant un sim-\n\nple billet avec ces mots: \" Garde ton maudit argent. Je ne veux\n\nplus rien de toi.\" Alors il partit à travers le monde a la recher-\n\n\nen Argentine, vivant dans un lupanar. Il l'a fait rentrer en Al-\n\n\n\nconclu qu'il était impossible de le faire changer. Elle l'a aban-\n\ndonné encore une fois, retournant aux cabarets des marins, au lit\n\n\nen vous serrant le bras avec desespoir, vous parla ainsi:\n\n\"Et maintenant je ne sortirai pas d'ici sans elle...\n\nAprès de longs mois je l'ai trouvée ... Elle ma martyrisé, mais\n\nja ne l'abandonnerai pas ... Je vous implore, Monsieur, parlez\n\navec elle ... Il faut qu'elle me revienne ... Dites lui ceci ...\n\n\n\nter dehors en attendant qu'ils sortent ... ivres et chantant des\n\nchansons grivoises ... Toute la rue me connaît déjà ... On se\n\nmoque de moi quand on me voit en faisant le guêt ... Je deviens\n\nfou de cela ... Et pourtant chaque nuit je retourne là bas ...\n\nMonsieur, je vous demande pour l'amour de Dieu; parlez avec elle...",
+        "characters": 2115,
+        "time_seconds": 18.62,
+        "original_characters": 2115,
+        "cleaned_characters": 1731,
+        "filtered": 384
+      }
+    ],
+    "total_pages": 9,
+    "successful": 9,
+    "failed": 0,
+    "is_sample": true,
+    "sample_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+};
+
+let currentDoc = null;
+let currentPageIndex = 0;
+let zoomLevel = 1;
+let isDragging = false;
+let startX, startY, translateX = 0, translateY = 0;
+
+window.addEventListener('DOMContentLoaded', () => {
+    initializeDocumentButtons();
+    initializeKeyboardShortcuts();
+    initializeImageViewer();
+});
+
+function initializeDocumentButtons() {
+    const container = document.getElementById('docButtons');
+    Object.entries(DOCUMENTS).forEach(([docId, doc]) => {
+        const btn = document.createElement('button');
+        btn.className = 'doc-btn';
+        btn.onclick = () => selectDocument(docId);
+
+        const meta = doc.metadata || doc.mets_metadata || {};
+        const pageCount = doc.pages ? doc.pages.length : 0;
+
+        const totalPages = doc.total_pages || pageCount;
+        const sampleText = doc.is_sample ? ` (${pageCount} samples)` : '';
+
+        btn.innerHTML = `
+            <div>${meta.title || docId}</div>
+            <div class="doc-btn-meta">${meta.author || ''} • ${meta.language ? meta.language.toUpperCase() : ''} • ${totalPages} pages${sampleText}</div>
+        `;
+        container.appendChild(btn);
+    });
+}
+
+function selectDocument(docId) {
+    currentDoc = DOCUMENTS[docId];
+    currentPageIndex = 0;
+
+    document.querySelectorAll('.doc-btn').forEach((btn, idx) => {
+        btn.classList.toggle('active', Object.keys(DOCUMENTS)[idx] === docId);
+    });
+
+    displayInfoBar();
+    createThumbnails();
+    displayPage();
+
+    document.getElementById('infoBar').style.display = 'flex';
+    document.getElementById('thumbnailStrip').style.display = 'block';
+    document.getElementById('comparison').style.display = 'grid';
+}
+
+function displayInfoBar() {
+    const container = document.getElementById('infoMeta');
+    const meta = currentDoc.metadata || currentDoc.mets_metadata || {};
+
+    let html = '';
+    if (meta.title) html += `<div class="info-item"><span class="info-label">Title</span><span class="info-value">${meta.title}</span></div>`;
+    if (meta.author) html += `<div class="info-item"><span class="info-label">Author</span><span class="info-value">${meta.author}</span></div>`;
+    if (meta.language) html += `<div class="info-item"><span class="info-label">Language</span><span class="info-value">${meta.language.toUpperCase()}</span></div>`;
+    html += `<div class="info-item"><span class="info-label">Pages</span><span class="info-value">${currentDoc.pages ? currentDoc.pages.length : 0}</span></div>`;
+
+    container.innerHTML = html;
+}
+
+function createThumbnails() {
+    const container = document.getElementById('thumbnails');
+    container.innerHTML = '';
+
+    if (!currentDoc.pages) return;
+
+    currentDoc.pages.forEach((page, idx) => {
+        const thumb = document.createElement('div');
+        thumb.className = 'thumbnail';
+        thumb.onclick = () => {
+            currentPageIndex = idx;
+            displayPage();
+        };
+
+        const img = document.createElement('img');
+        img.src = getImagePath(page);
+        img.alt = `Page ${idx + 1}`;
+
+        const label = document.createElement('div');
+        label.className = 'thumbnail-label';
+        label.textContent = idx + 1;
+
+        thumb.appendChild(img);
+        thumb.appendChild(label);
+        container.appendChild(thumb);
+    });
+
+    updateThumbnailActive();
+}
+
+function getImagePath(page) {
+    // For samples: use samples/images/ path
+    if (currentDoc.is_sample && page.image_file) {
+        const urn = currentDoc.mets_metadata?.urn || '';
+        if (urn) {
+            const objectId = urn.split('/').pop().replace(/:/g, '_');
+            return `samples/images/${objectId}/${page.image_file}`;
+        }
+    }
+
+    // Standard paths
+    if (page.image_path) return page.image_path;
+    if (page.image) return page.image;
+    if (page.image_file && currentDoc.mets_metadata) {
+        const urn = currentDoc.mets_metadata.urn;
+        if (urn) {
+            const objectId = urn.split('/').pop().replace(/:/g, '_');
+            return `data/${objectId}/images/${page.image_file}`;
+        }
+    }
+    if (page.file) return page.file;
+    return '';
+}
+
+function updateThumbnailActive() {
+    document.querySelectorAll('.thumbnail').forEach((thumb, idx) => {
+        thumb.classList.toggle('active', idx === currentPageIndex);
+    });
+}
+
+function displayPage() {
+    if (!currentDoc.pages || !currentDoc.pages[currentPageIndex]) return;
+
+    const page = currentDoc.pages[currentPageIndex];
+    document.getElementById('pageImage').src = getImagePath(page);
+
+    const textContainer = document.getElementById('ocrText');
+    if (page.filtered_text && page.filtered_text.trim()) {
+        textContainer.textContent = page.filtered_text;
+        textContainer.classList.remove('empty-page');
+    } else if (page.text && page.text.trim()) {
+        textContainer.textContent = page.text;
+        textContainer.classList.remove('empty-page');
+    } else {
+        textContainer.innerHTML = '<div class="empty-page">[EMPTY PAGE]</div>';
+        textContainer.classList.add('empty-page');
+    }
+
+    updateNavigation();
+    updateThumbnailActive();
+    resetZoom();
+}
+
+function updateNavigation() {
+    const pageCount = currentDoc.pages ? currentDoc.pages.length : 0;
+    document.getElementById('prevBtn').disabled = currentPageIndex === 0;
+    document.getElementById('nextBtn').disabled = currentPageIndex === pageCount - 1;
+    document.getElementById('pageInfo').textContent = `${currentPageIndex + 1} / ${pageCount}`;
+}
+
+function previousPage() {
+    if (currentPageIndex > 0) {
+        currentPageIndex--;
+        displayPage();
+    }
+}
+
+function nextPage() {
+    const pageCount = currentDoc.pages ? currentDoc.pages.length : 0;
+    if (currentPageIndex < pageCount - 1) {
+        currentPageIndex++;
+        displayPage();
+    }
+}
+
+function initializeImageViewer() {
+    const viewer = document.getElementById('imageViewer');
+    viewer.addEventListener('mousedown', (e) => {
+        if (zoomLevel > 1) {
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+        }
+    });
+    viewer.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            updateImageTransform();
+        }
+    });
+    viewer.addEventListener('mouseup', () => { isDragging = false; });
+    viewer.addEventListener('mouseleave', () => { isDragging = false; });
+    viewer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? -0.1 : 0.1;
+        zoomLevel = Math.max(0.5, Math.min(5, zoomLevel + delta));
+        updateImageTransform();
+        updateZoomDisplay();
+    });
+}
+
+function updateImageTransform() {
+    const img = document.getElementById('pageImage');
+    img.style.transform = `scale(${zoomLevel}) translate(${translateX / zoomLevel}px, ${translateY / zoomLevel}px)`;
+}
+
+function updateZoomDisplay() {
+    document.getElementById('zoomLevel').textContent = Math.round(zoomLevel * 100) + '%';
+}
+
+function zoomIn() {
+    zoomLevel = Math.min(5, zoomLevel + 0.25);
+    updateImageTransform();
+    updateZoomDisplay();
+}
+
+function zoomOut() {
+    zoomLevel = Math.max(0.5, zoomLevel - 0.25);
+    updateImageTransform();
+    updateZoomDisplay();
+}
+
+function zoomReset() {
+    zoomLevel = 1;
+    updateImageTransform();
+    updateZoomDisplay();
+}
+
+function resetZoom() {
+    zoomLevel = 1;
+    translateX = 0;
+    translateY = 0;
+    updateImageTransform();
+    updateZoomDisplay();
+}
+
+function copyText() {
+    const text = document.getElementById('ocrText').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        showToast('✓ Text copied');
+    });
+}
+
+function downloadText() {
+    const text = document.getElementById('ocrText').textContent;
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `page_${currentPageIndex + 1}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast('✓ Text downloaded');
+}
+
+function downloadImage() {
+    const img = document.getElementById('pageImage');
+    const a = document.createElement('a');
+    a.href = img.src;
+    a.download = `page_${currentPageIndex + 1}.jpg`;
+    a.click();
+    showToast('✓ Image downloaded');
+}
+
+function initializeKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+        switch(e.key) {
+            case 'ArrowLeft': e.preventDefault(); previousPage(); break;
+            case 'ArrowRight': e.preventDefault(); nextPage(); break;
+            case '+': case '=': e.preventDefault(); zoomIn(); break;
+            case '-': e.preventDefault(); zoomOut(); break;
+            case '0': e.preventDefault(); zoomReset(); break;
+        }
+    });
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+}
