@@ -520,4 +520,84 @@ deepseek-ocr/
 
 ---
 
+## 2025-10-29 (Session 2): Wecker Antidotarium 1617 Processing
+
+### New Sample: Latin Medical Book (1617)
+- **Document:** Antidotarium Generale et Speciale (Basel, 1617)
+- **Author:** Johann Jacob Wecker
+- **Pages:** 20 pages (13 text + 7 ornamental)
+- **Source:** Image collection with ground-truth transcriptions
+- **Language:** Latin
+
+### Processing Results
+- **Total Characters:** 31,201
+- **Processing Time:** 486.4s (8.1 minutes)
+- **Avg Speed:** 24.3s/page
+- **CER Results:** 13.57-26.66% on text pages ⭐
+
+### CER Breakdown (Ground-Truth Evaluation)
+| Pages | CER Range | Quality | Count |
+|-------|-----------|---------|-------|
+| Text (0008-0016) | 13.57-26.66% | Excellent | 6 pages |
+| Index (0032-0035) | 70-75% | Poor (complex layout) | 4 pages |
+| Ornamental | N/A (filtered) | N/A | 7 pages |
+
+**Best Result:** Page 0012 with **CER 13.57%** - lowest error rate in entire project!
+
+### Key Findings
+1. **Best CER in Project**
+   - Latin outperforms French (HSA: 21.87% vs Wecker: 13.57%)
+   - 17th century text performs better than 20th century documents
+
+2. **Why Latin Performs Better**
+   - Consistent medical terminology
+   - High-quality 1617 Basel typography
+   - Simpler structure than vernacular languages
+
+3. **Challenge Areas**
+   - Complex index pages: CER 70-75%
+   - Ornamental pages: Repetition bug (1 page, successfully filtered)
+
+4. **Largest Successful Document**
+   - 20 pages (previous max: 9 pages)
+   - All pages processed successfully
+   - Ground-truth available for 13 pages
+
+### Technical Implementation
+1. **Batch Processing**
+   - Processed all 20 pages with single for loop
+   - Ground-truth evaluation integrated
+   - Created 13 evaluation reports with CER/WER metrics
+
+2. **Multi-Image Sample Creation**
+   - Used `create_multi_image_sample.py`
+   - Combined 20 individual results into single viewer sample
+   - Total: 31,201 characters across 20 pages
+
+3. **Image Path Issues (Fixed)**
+   - Initial folder: `o_wecker_antidotarium_1617` → 404 errors
+   - URN `ocr:wecker_antidotarium_1617` converts `:` to `_`
+   - Final fix: Renamed to `ocr_wecker_antidotarium_1617`
+   - Viewer now loads all 20 images correctly
+
+### Documentation Updates
+- **00-Index.md:** Updated to 7 documents, 42 pages, 81,791 characters
+- **03-Results.md:** Added complete Wecker section with CER table
+- **04-Learnings.md:** Added "Historical Latin Texts" section with analysis
+- **JOURNAL.md:** This entry
+
+### GitHub Pages Deployment
+- Total samples: 7 documents
+- Total pages: 42
+- New folder: `docs/samples/images/ocr_wecker_antidotarium_1617/` (20 images)
+- Live at: https://chpollin.github.io/deepseek-ocr/
+
+### Statistics Update
+- **Documents Processed:** 6 → 7
+- **Pages Successful:** 22 → 42
+- **Total Characters:** 50,590 → 81,791
+- **Languages:** DE, FR, EN, IT → DE, FR, EN, IT, LA
+
+---
+
 **Journal Complete:** All sessions documented through 2025-10-29

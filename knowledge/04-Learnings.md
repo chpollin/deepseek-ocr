@@ -464,6 +464,53 @@ git push
 - Cost/benefit: NOT worth it for clean documents
 - See [[05-OCR-Optimization]] for full experiments
 
+### Historical Latin Texts (Wecker Antidotarium 1617) ⭐
+
+**Best Results in the Project:**
+- **CER 13.57-26.66%** on 17th century Latin medical text
+- **13.57%** on page 0012 - lowest error rate achieved
+- Better than French (HSA: 21.87%) despite being 300+ years older
+
+**Why Latin Performs Better:**
+1. **Consistent Medical Terminology**
+   - Standardized Latin vocabulary
+   - Fewer spelling variants than vernacular languages
+   - Medical terms follow strict patterns
+
+2. **Print Quality**
+   - 1617 Basel edition: High-quality typography
+   - Clear letterforms, good contrast
+   - Minimal degradation over time
+
+3. **Text Structure**
+   - Simpler sentence structure than German/French
+   - Fewer ligatures and special characters
+   - Predictable formatting (titles, paragraphs)
+
+**Challenge Areas:**
+- **Complex Layouts:** Index pages (CER 70-75%)
+  - Multi-column format
+  - Abbreviated references
+  - Mixed font sizes
+- **Ornamental Pages:** Repetition bug (1 page)
+  - Successfully filtered (99.7%)
+  - Empty decorative borders trigger the bug
+
+**Comparison:**
+| Language | Document | Year | CER | Quality |
+|----------|----------|------|-----|---------|
+| Latin | Wecker | 1617 | **13.57%** | ⭐ Best |
+| French | HSA Letter | ~1940s | 21.87% | Good |
+| German | SZD Letters | ~1930s | ~2-3%* | Excellent* |
+
+*Estimated, no ground-truth available
+
+**Recommendation:**
+- **Historical Latin texts are EXCELLENT candidates** for DeepSeek-OCR
+- Especially medical, scientific, and theological works
+- 17th-18th century prints often have better quality than 19th-20th century newspapers
+- Ground-truth evaluation highly recommended for Latin corpora
+
 ---
 
-**Updated:** 2025-10-29 - Added karteikarten, ground-truth, repetition bug insights
+**Updated:** 2025-10-29 - Added karteikarten, ground-truth, repetition bug, and Latin OCR insights

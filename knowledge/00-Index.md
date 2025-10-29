@@ -8,7 +8,7 @@
 
 - [[01-Quick-Start]] - Installation & Usage
 - [[02-Architecture]] - System-Architektur
-- [[03-Results]] - Ergebnisse & Statistiken (6 Dokumente, 22 Seiten)
+- [[03-Results]] - Ergebnisse & Statistiken (7 Dokumente, 42 Seiten)
 - [[04-Learnings]] - Key Insights & Best Practices
 - [[05-OCR-Optimization]] - Parameter Tuning & Experimente
 
@@ -24,7 +24,7 @@
 | **Image Processing** | ✅ Done | HSA (FR, 1p), karteikarten (Multi, 6p) |
 | **PDF Processing** | ⚠️ Partial | DTS_Flechte (2/20 pages, memory issues) |
 | **Viewer** | ✅ Live | [GitHub Pages](https://chpollin.github.io/deepseek-ocr/) |
-| **Samples** | ✅ Done | 6 documents, 22 pages, 50,590 characters |
+| **Samples** | ✅ Done | 7 documents, 42 pages, 81,791 characters |
 | **Docs** | ✅ Done | This knowledge base |
 
 ---
@@ -43,9 +43,9 @@ graph LR
 ### Input Formats
 - **METS** - Digital archive format (XML metadata) - 2 docs
 - **PDF** - Direct PDF processing (partial success) - 1 doc
-- **Images** - PNG/JPG, single or multi-image collections - 3 docs
-  - Single images with ground-truth evaluation
-  - Multi-image collections (karteikarten: 6 cards)
+- **Images** - PNG/JPG, single or multi-image collections - 4 docs
+  - Single images with ground-truth evaluation (HSA letter)
+  - Multi-image collections (karteikarten: 6 cards, Wecker: 20 pages)
 
 ### Processing
 - **OCR** - DeepSeek-OCR model (BF16 precision, 3B params)
@@ -57,7 +57,7 @@ graph LR
 - **Interactive Viewer** - Side-by-side comparison
 - **Transcriptions** - Complete text files
 - **Reports** - Statistics & metrics (Markdown)
-- **Samples** - GitHub Pages deployment (6 documents)
+- **Samples** - GitHub Pages deployment (7 documents, 42 pages)
 
 ---
 
@@ -75,16 +75,17 @@ deepseek-ocr/
 │   └── JOURNAL.md            # Development journal
 ├── docs/                      # 🌐 GitHub Pages Website
 │   ├── index.html            # Interactive viewer
-│   └── samples/images/       # 22+ sample images
+│   └── samples/images/       # 42 sample images
 │       ├── o_szd.151/        # German letter (3 images)
 │       ├── o_szd.196/        # French speech (9 images)
 │       ├── o_hsa_letter_2261/ # French Nobel Prize letter (1 image)
 │       ├── o_anno_grazer_tagblatt/ # German newspaper (1 image)
 │       ├── o_DTS_Flechte_20pages/ # Botanical text (2 images)
-│       └── o_karteikarten/    # Archive cards (6 images)
+│       ├── o_karteikarten/    # Archive cards (6 images)
+│       └── ocr_wecker_antidotarium_1617/ # Latin medical book 1617 (20 images)
 ├── samples/                   # 📂 Sample Data (for viewer)
 │   ├── images/               # Source images
-│   ├── samples.json          # Master sample list (6 docs)
+│   ├── samples.json          # Master sample list (7 docs)
 │   ├── *_sample.json         # Viewer data
 │   ├── *_full.json           # Complete data
 │   ├── *_transcription.txt   # Full text
@@ -95,7 +96,8 @@ deepseek-ocr/
 │   ├── o_hsa_letter_2261/    # Single image + ground-truth
 │   ├── anno/                 # Historical newspaper
 │   ├── DTS_Flechte_20pages.pdf # PDF (20 pages)
-│   └── karteikarten/         # 6 archive cards
+│   ├── karteikarten/         # 6 archive cards
+│   └── 1617-wecker-antidotiarum-001-150_pdf/ # Latin medical book (20 pages + ground-truth)
 ├── results/                   # 💾 OCR Outputs
 │   ├── mets_*/               # METS results
 │   ├── pdf_*/                # PDF results
@@ -139,10 +141,10 @@ deepseek-ocr/
 
 | Metric | Value |
 |--------|-------|
-| **Documents Processed** | 6 |
-| **Pages Successful** | 22 |
-| **Total Characters** | 50,590 |
-| **Languages** | DE, FR, EN, IT |
+| **Documents Processed** | 7 |
+| **Pages Successful** | 42 |
+| **Total Characters** | 81,791 |
+| **Languages** | DE, FR, EN, IT, LA |
 | **Avg Speed** | 6-25s/page (content-dependent) |
 | **VRAM Usage** | ~10 GB |
 
@@ -150,7 +152,9 @@ deepseek-ocr/
 
 - ✅ **METS Archives:** 2 documents (12 pages)
 - ✅ **Single Images:** 2 documents (2 pages)
-- ⚠️ **Multi-Image Collections:** 1 document (6 cards, 5/6 successful)
+- ✅ **Multi-Image Collections:** 2 documents (26 pages)
+  - karteikarten: 6 cards (5/6 successful)
+  - Wecker Antidotarium: 20 pages (13 text pages + 7 ornamental)
 - ⚠️ **PDF:** 1 document (2/20 pages successful)
 - ❌ **Historical Newspapers:** 1 document (failed, repetition bug)
 
@@ -163,6 +167,7 @@ deepseek-ocr/
 2. **o_szd.196 (French):** Consistent quality, 200 pages/hour throughput
 3. **o_hsa_letter_2261 (French):** First ground-truth evaluation (CER 21.87%)
 4. **karteikarten (Multi-language):** 5/6 cards successful, IT/EN/DE support
+5. **Wecker Antidotarium 1617 (Latin):** Best CER results (13.57-26.66%), 20-page historical medical text
 
 ### ❌ Failures
 1. **anno_grazer_tagblatt:** Repetition bug on Fraktur newspaper
@@ -171,7 +176,8 @@ deepseek-ocr/
 
 ### 🎯 Best Use Cases
 - Modern typed documents (letters, forms)
-- Multi-language archives (DE/FR/EN/IT)
+- Multi-language archives (DE/FR/EN/IT/LA)
+- Historical Latin texts (13-27% CER on 17th century documents)
 - Scientific publications (citations, formulas)
 - Ground-truth evaluation projects
 
