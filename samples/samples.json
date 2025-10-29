@@ -308,5 +308,68 @@
       1
     ],
     "note": "Sample: Only 2 of 20 pages processed successfully"
+  },
+  "karteikarten": {
+    "mets_metadata": {
+      "title": "Historical Archive Cards Collection",
+      "signature": "karteikarten",
+      "author": "Various",
+      "language": "multi",
+      "owner": "OCR Result",
+      "urn": "info:fedora/o:karteikarten"
+    },
+    "pages": [
+      {
+        "page": 1,
+        "file_id": "page_1",
+        "image_file": "signal-2025-10-29-073743.jpeg",
+        "characters": 1078,
+        "time_seconds": 15.2,
+        "note": "Italian card - Repetition bug (PASSAPORTO repeated)"
+      },
+      {
+        "page": 2,
+        "file_id": "page_2",
+        "image_file": "signal-2025-10-29-073743_002.jpeg",
+        "characters": 514,
+        "time_seconds": 6.11
+      },
+      {
+        "page": 3,
+        "file_id": "page_3",
+        "image_file": "signal-2025-10-29-073743_003.jpeg",
+        "characters": 854,
+        "time_seconds": 8.58
+      },
+      {
+        "page": 4,
+        "file_id": "page_4",
+        "image_file": "signal-2025-10-29-073743_004.jpeg",
+        "characters": 96,
+        "time_seconds": 2.04,
+        "note": "German Ankara letter - Partially illegible"
+      },
+      {
+        "page": 5,
+        "file_id": "page_5",
+        "image_file": "signal-2025-10-29-073743_005.jpeg",
+        "characters": 791,
+        "time_seconds": 11.71,
+        "note": "German letter - All text formatted as bold"
+      },
+      {
+        "page": 6,
+        "file_id": "page_6",
+        "image_file": "signal-2025-10-29-073743_006.jpeg",
+        "characters": 1016,
+        "time_seconds": 11.89
+      }
+    ],
+    "total_pages": 6,
+    "successful": 6,
+    "failed": 0,
+    "is_sample": true,
+    "sample_indices": [0, 1, 2, 3, 4, 5],
+    "note": "Collection of historical archive cards in multiple languages (Italian, English, German)"
   }
 }
