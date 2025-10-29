@@ -335,3 +335,54 @@ for page in pages:
 ---
 
 **See also:** [[01-Quick-Start]] | [[03-Results]] | [[04-Learnings]]
+
+---
+
+## NEW: Image-Based Pipeline
+
+```
+┌─────────────┐
+│   Input     │
+│ JPG/PNG     │
+└──────┬──────┘
+       │
+       v
+┌─────────────┐
+│ test_ocr_   │
+│ image.py    │
+└──────┬──────┘
+       │
+       v
+┌─────────────┐
+│ OCR Engine  │
+│ + optional  │
+│ ground-truth│
+└──────┬──────┘
+       │
+       v
+┌─────────────┐
+│ Evaluation  │
+│ CER / WER   │
+└──────┬──────┘
+       │
+       v
+┌─────────────┐
+│  create_    │
+│ sample_from │
+│ _image.py   │
+└─────────────┘
+```
+
+**Scripts:**
+- `test_ocr_image.py` - Single image OCR + evaluation
+- `create_sample_from_image.py` - Convert to viewer format
+- `create_multi_image_sample.py` - Combine multiple images
+
+**Use Cases:**
+- Ground-truth evaluation (HSA: CER 21.87%)
+- Multi-image collections (karteikarten: 6 cards)
+- Quality testing on specific documents
+
+---
+
+**Updated:** 2025-10-29 - Added image-based workflows

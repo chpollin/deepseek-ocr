@@ -429,3 +429,41 @@ git push
 
 **Last Updated:** 2025-10-27
 **Contributors:** Research Team
+
+---
+
+## NEW Learnings (2025-10-29)
+
+### Ground-Truth Evaluation
+- **HSA Letter:** CER 21.87%, WER 30.75%
+- Character difference: -106 chars (-5%)
+- Acceptable for historical documents
+- Main errors: brackets `[C] [e]`, word merges
+
+### Repetition Bug Pattern
+**Triggers:**
+- Complex multi-column layouts (ANNO newspaper)
+- Documents with stamps/overlays (Italian karteikarten)
+- Fraktur script + advertisements
+
+**Examples:**
+- ANNO: Repeats "Anfang der Vorführung..." thousands of times
+- Italian card: Repeats "PASSAPORTO N.Q T E"
+
+**Mitigation:** None - avoid these document types
+
+### Multi-Language Collections
+- Karteikarten: 5/6 successful (IT/EN/DE)
+- English forms: Best results (6-10s, 100% success)
+- German typed: Good (15-20s, 98% accuracy)
+- Italian complex forms: Risk of repetition bug
+
+### Parameter Tuning Results
+- Standard (640/640): Sufficient for 95% of documents
+- High quality (1024/640): Only 1-2% CER improvement
+- Cost/benefit: NOT worth it for clean documents
+- See [[05-OCR-Optimization]] for full experiments
+
+---
+
+**Updated:** 2025-10-29 - Added karteikarten, ground-truth, repetition bug insights

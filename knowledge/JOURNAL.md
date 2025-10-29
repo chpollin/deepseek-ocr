@@ -451,3 +451,73 @@ deepseek-ocr/
 **Journal Started**: 2025-10-27
 **Last Updated**: 2025-10-27
 **Status**: Active Development
+
+---
+
+## 2025-10-28: HSA + ANNO + DTS Processing
+
+### HSA Letter 2261 (French Nobel Prize Letter)
+- First ground-truth evaluation
+- CER: 21.87%, WER: 30.75%
+- Processing time: 22.5s
+- Created `test_ocr_image.py` script
+- **Learning:** Ground-truth comparison valuable for quality assessment
+
+### ANNO Grazer Tagblatt (Historical Newspaper 1916)
+- Fraktur script + multi-column layout
+- **FAILED:** Repetition bug - repeats text thousands of times
+- Processing time: 283s (4.7 minutes) before timeout
+- **Learning:** DeepSeek-OCR NOT suitable for complex historical newspapers
+
+### DTS Flechte (Botanical Text, 20 pages)
+- Scientific German with Latin species names
+- Only 2/20 pages successful (memory issues)
+- **Learning:** Large PDFs need better preprocessing, page-by-page extraction
+
+---
+
+## 2025-10-29: Karteikarten Multi-Image Collection
+
+### Processing 6 Archive Cards
+- Languages: Italian, English, German
+- Total time: 55.5s (avg 9.3s/card)
+- Success rate: 5/6 (83%)
+
+**Results:**
+- Card 1 (Italian): ❌ Repetition bug
+- Cards 2-3 (English): ✅ Excellent (6-8s)
+- Card 4 (German): ⚠️ Partial (faded)
+- Cards 5-6 (German/English): ✅ Good (11s)
+
+### New Script: create_multi_image_sample.py
+- Combines multiple OCR results into single viewer sample
+- Use case: Document collections, photo albums
+- Output: Combined JSON with per-page statistics
+
+### Bug Fix: Missing Text Fields
+- samples.json was missing `text` fields
+- Caused [EMPTY PAGE] display in viewer
+- Fixed by copying text from individual samples
+
+### Website Update
+- Updated subtitle: "Test & Evaluation Page • Using DeepSeek-OCR (3B params, BF16)"
+- Links to official GitHub repository
+- Now shows: 6 documents, 22 pages
+
+---
+
+## 2025-10-29: Documentation Update
+
+### Knowledge Base Complete Rewrite
+- **00-Index.md:** Updated with all 6 samples, new scripts
+- **01-Quick-Start.md:** Added 7 workflows, 4 complete examples
+- **03-Results.md:** Documented all 6 samples with detailed analysis
+- **02-Architecture.md:** Added image-based pipeline
+- **04-Learnings.md:** Added ground-truth, repetition bug, karteikarten insights
+- **05-OCR-Optimization.md:** Already complete (parameter tuning experiments)
+
+**Total Documentation:** 6 markdown files, comprehensive coverage
+
+---
+
+**Journal Complete:** All sessions documented through 2025-10-29
